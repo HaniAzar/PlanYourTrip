@@ -1,0 +1,46 @@
+<div id="underDiv"></div>
+  <div id="signToTripDiv">
+    <mat-icon id="close" (click)="closeDialog()">close</mat-icon>
+    <h4> טופס הרשמה לטיול מאורגן </h4>
+    <hr>
+    <br>
+    <form [formGroup]="signToTrip" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <input matInput placeholder=" שם משתמש" formControlName="userName">
+        <mat-error *ngIf="signToTrip.controls['userName'].hasError('minlength')">מינימום תווים </mat-error>
+        <mat-error *ngIf="signToTrip.controls['userName'].hasError('required')">שדה חובה </mat-error>
+        <mat-error *ngIf="signToTrip.controls['userName'].hasError('pattern')">רק אותיות</mat-error>
+        <mat-icon matSuffix>person</mat-icon>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <input matInput placeholder=" טלפון " formControlName="phone" required>
+        <mat-error *ngIf="signToTrip.controls['phone'].hasError('minlength')">מינימום תווים </mat-error>
+        <mat-error *ngIf="signToTrip.controls['phone'].hasError('required')">שדה חובה </mat-error>
+        <mat-error *ngIf="signToTrip.controls['phone'].hasError('pattern')">רק מספרים</mat-error>
+        <mat-icon matSuffix>phone</mat-icon>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <input matInput placeholder=" כתובת מייל" formControlName="email" required>
+        <mat-error *ngIf="signToTrip.controls['email'].hasError('email')">כתובת מייל לא חוקית</mat-error>
+        <mat-error *ngIf="signToTrip.controls['email'].hasError('required')">שדה חובה </mat-error>
+        <mat-icon matSuffix>email</mat-icon>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <input matInput type="number" placeholder=" מספר משתתפים " formControlName="numOfTourists" required>
+        <mat-error *ngIf="signToTrip.controls['numOfTourists'].hasError('minlength')">מינימום תווים </mat-error>
+        <mat-error *ngIf="signToTrip.controls['numOfTourists'].hasError('required')">שדה חובה </mat-error>
+        <mat-error *ngIf="signToTrip.controls['numOfTourists'].hasError('pattern')">רק מספרים</mat-error>
+        <mat-error *ngIf="signToTrip.hasError('max')">מספר לא חוקי</mat-error>
+        <!-- <mat-error *ngIf="illegalNumber">אין מספיק מקומות</mat-error> -->
+        <mat-icon matSuffix>family</mat-icon>
+      </mat-form-field>
+      <br>
+      <mat-checkbox (click)="isOk()">קראתי ואני מסכים\ה לתנאי אישור הרשמה לטיול מודרך
+      </mat-checkbox>
+      <button *ngIf="ok" mat-raised-button type="submit" name="submit"  [disabled]="signToTrip.invalid" >הרשם לטיול</button>
+
+    </form>
+  </div>

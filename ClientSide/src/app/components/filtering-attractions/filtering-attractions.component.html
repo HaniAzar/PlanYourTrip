@@ -1,0 +1,141 @@
+<!-- <h4>תכנן את הטיול שלך</h4>
+<hr> -->
+<div *ngIf="attractions">
+   <!-- <div id="louding"></div> -->
+   <div id="filtering">
+      <h4 class="green">בחר את הפרטים המועדפים עליך</h4>
+      <hr>
+      <div id="areas" class="filterDiv">
+         <h6> אזורים בארץ</h6>
+         <div *ngFor="let area of areas">
+            <mat-checkbox (click)="Areas(area)">{{area}}</mat-checkbox>
+         </div>
+      </div>
+      <div class="scrollbar filterDiv categories">
+         <h6> קטגוריות</h6>
+         <div class="force-overflow">
+            <div *ngFor="let category of allCategories">
+               <mat-checkbox (click)="Categories(category.categoryName)">{{category.categoryName}}</mat-checkbox>
+            </div>
+         </div>
+      </div>
+
+      <div id="seasons" class="filterDiv">
+         <h6>עונות</h6>
+         <div *ngFor="let season of seasons">
+            <mat-checkbox (click)="Seasons(season)">{{season}}</mat-checkbox>
+         </div>
+      </div>
+
+      <div id="properties" class="filterDiv">
+         <h6>מאפיינים</h6>
+         <div *ngFor="let prop of properties">
+            <mat-checkbox (click)="Props(prop)">{{prop}}</mat-checkbox>
+         </div>
+      </div>
+      <button mat-raised-button (click)="searchAttractions()" id="filter" (click)="isSearch=true">
+         <mat-icon>search</mat-icon>
+         סנן אתרים
+      </button>
+   </div>
+   <div id="mapContainer">
+      <app-map [attractions]="attractions" (eventInChild)="scroll($event)"></app-map>
+   </div>
+   <div id="advertisment" class="bounceInLeft">
+      <h6 style="margin-right:0vw;">כל הסיבות לתכנן טיול עם<br> Plan Your Trip:
+      </h6>
+      <!-- <mat-icon>thumb_up</mat-icon> -->
+      <p>
+         תהליך התכנון קל ויעיל,
+         <br>
+         לאחר סינון האתרים לפי בחירתכם, תוצאות הסינון יוצגו על המפה,
+         וכבר בעת הוספת אתר למסלול יופיע המרחק מהאתר הקודם.
+         <br>
+         <label> *המלצה שלנו: <br>
+            בחרו אתרי תיירות מקטגוריות שונות
+            להנאה מושלמת.
+         </label>
+         לבחירת מדריך מקצועי
+         מצוות המדריכים שלנו -
+         <a id="clickHere" routerLink="/planYourTrip/addGuideToTrip" routerLinkActive="active">לחצו כאן</a><br>
+      </p>
+   </div>
+
+   <span id="target"></span>
+   <div id="attractionResults">
+      <label *ngIf="!isSearch" class="results"> {{attractionsLength}} אתרי תיירות ונקודות עניין בארץ |</label>
+      <label *ngIf="isSearch" class="results"> {{attractionsLength}} תוצאות לסינון שלך |</label>
+      <label class="results">עמוד {{currentPage}} מתוך {{numOfPages}}</label>
+      <span>
+         <mat-form-field *ngIf="attractions">
+            <input matInput [(ngModel)]="searchName" placeholder="סנן לפי שם">
+            <mat-icon matSuffix>search</mat-icon>
+         </mat-form-field>
+      </span>
+   </div>
+   <div *ngFor="let attraction of attractions | filterList:searchName  | slice: pageSize | slice: 0:itemsPerPage"
+      [id]="'attraction' + attraction.id">
+      <ngb-carousel interval="3000">
+         <ng-template ngbSlide *ngFor="let img of imagesSrcList[attraction.id]">
+            <div id="imgDiv" class="picsum-img-wrapper">
+               <img [src]="img">
+            </div>
+         </ng-template>
+      </ngb-carousel>
+      <div id="attractions" *ngIf="attraction">
+         <h4 id="attractionName" class="green"> {{attraction.attractionName}} </h4>
+         <div id="category" class="details categories">
+            <h6>:סוג</h6>
+            <p *ngFor="let categoryName of categoriesForAttractions[attraction.id]">{{categoryName}} *</p>
+         </div>
+
+         <div id="location" class="details categories">
+            <h6>:מיקום</h6>
+            <label>כתובת: {{attraction.address}} </label><br>
+            <label>אזור: {{attraction.area}} </label>
+         </div>
+
+         <div id="match" class="details categories"
+            *ngIf="attraction.isMatchGroups||attraction.isMatchFamilies||attraction.isMatchChildren">
+            <h6>:מאפיינים</h6>
+            <label *ngIf="attraction.isMatchGroups">מתאים לקבוצות</label><br>
+            <label *ngIf="attraction.isMatchFamilies">מתאים למשפחות</label>
+            <label *ngIf="attraction.isMatchChildren">מתאים לילדים</label><br>
+            <label *ngIf="attraction.accessibility"> {{attraction.accessibility}} למוגבלים</label><br>
+         </div>
+         <div id="contact" class="details categories" *ngIf="attraction.phoneNumber||attraction.link">
+            <h6>:פרטים ליצירת קשר</h6>
+            <label>:מספר טלפון</label><br>
+            <label *ngIf="attraction.phoneNumber"> {{attraction.phoneNumber}}</label><br>
+            <a id="link" *ngIf="attraction.link" target="_blank" [href]="attraction.link">אתר אינטרנט</a>
+         </div>
+         <div id="moreDetails" class="details categories">
+            <h6>:פרטים נוספים</h6>
+            <label *ngIf="attraction.hardnessLevel">| רמת קושי: {{attraction.hardnessLevel}} </label>
+            <label *ngIf="season(attraction.seasson)&& attraction.seasson">| {{seasson}} </label>
+            <label *ngIf="isPayment(attraction.payment)">| הכניסה בתשלום </label>
+            <label *ngIf="attraction.notes">{{attraction.notes}} </label><br>
+            <span *ngIf="attraction.openningHour||attraction.closingHour">
+               <label *ngIf="attraction.closingHour">שעת סגירה: {{attraction.closingHour}}</label>
+               <label *ngIf="attraction.openningHour">שעת פתיחה: {{attraction.openningHour}}</label>
+               <label *ngIf="attraction.openningHour||attraction.closingHour"> :שעות פעילות</label><br>
+            </span>
+            <span *ngIf="attraction.estimatedTime">
+               <label *ngIf="attraction.estimatedTime!='1'"> אנשים בדרך כלל נמצאים כאן {{attraction.estimatedTime}} שעות
+                  *</label>
+               <label *ngIf="attraction.estimatedTime=='1'"> אנשים בדרך כלל נמצאים כאן שעה אחת
+                  *</label>
+            </span>
+         </div>
+         <button id="addToTrip" mat-raised-button (click)="addToTrip(attraction)">הוסף למסלול </button>
+      </div>
+      <hr>
+   </div>
+   <br>
+   <div id="wrap">
+      <ngb-pagination (click)="changePage=true" *ngIf="attractionsLength>8" [collectionSize]="attractionsLength"
+         [pageSize]="itemsPerPage" [(page)]="currentPage" (pageChange)="onPageChange(currentPage)" [maxSize]="7"
+         [boundaryLinks]="true" [rotate]="true" [ellipses]="false">
+      </ngb-pagination>
+   </div>
+</div>

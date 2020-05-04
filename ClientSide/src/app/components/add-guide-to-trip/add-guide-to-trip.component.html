@@ -1,0 +1,69 @@
+<h4>מדריכי הטיולים של Plan Your Trip</h4>
+<hr>
+<div *ngIf="isGuidesForChoose" id="back">
+  <button class="buttons" mat-raised-button (click)="backToPlanning()">
+    <mat-icon>arrow_forward_ios</mat-icon>חזרה לתכנון
+  </button>
+  <button  class="buttons" mat-raised-button (click)="editTrip()">עריכת מסלול</button>
+
+</div>
+<div *ngIf="isGuidesForChoose" id="setDate">
+  <label>על מנת לבדוק זמינות מדריך, בחר תאריך רצוי ליום הטיול</label><br>
+  <mat-form-field>
+    <input matInput [(ngModel)]='dateChoose' [matDatepicker]="dp3" placeholder=" בחר תאריך " disabled>
+    <mat-datepicker-toggle matSuffix [for]="dp3">
+    </mat-datepicker-toggle>
+    <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+  </mat-form-field>
+  <hr>
+</div>
+
+
+
+
+<div id="filterGuide">
+  <h5 id="filterWord">סינון מדריכים</h5><br>
+  <mat-form-field>
+    <input matInput autocomplete="off" [(ngModel)]="guideName" type="text" placeholder="שם מדריך">
+    <mat-icon matSuffix>person</mat-icon>
+  </mat-form-field>
+  <!-- <br> -->
+  <mat-form-field>
+    <input matInput autocomplete="off" [(ngModel)]="language" type="text" placeholder="שפת הדרכה">
+    <mat-icon matSuffix>language</mat-icon>
+  </mat-form-field>
+  <div id="dateFilter" *ngIf="isGuidesForChoose">
+    <mat-form-field>
+      <input matInput [(ngModel)]='filterDate' [matDatepicker]="dp2" placeholder="תאריך פנוי" disabled>
+      <mat-datepicker-toggle matSuffix [for]="dp2"></mat-datepicker-toggle>
+      <mat-datepicker #dp2 disabled="false"></mat-datepicker>
+    </mat-form-field>
+    <button id="filter" mat-raised-button (click)="searchGuideByDate(filterDate)">סנן<mat-icon matSuffix>search</mat-icon>
+    </button>
+  </div>
+</div>
+<hr>
+
+<div class="card" *ngFor="let guide of tourGuides | filterList:guideName |  filterBylanguage:language">
+  <div class="box">
+    <div class="img">
+      <img *ngIf="guide.profile" [src]="guide.profile">
+    </div>
+    <div id="detailsGuide">
+      <b>שם מדריך: {{guide.guideName}}</b><br>
+      <label>{{guide.phoneNumber}}</label><br>
+      <label *ngIf="guide.details" id="details" ngbPopover={{guide.details}} triggers="mouseenter:mouseleave"
+        popoverTitle="קצת על עצמי...">קצת על עצמי...
+      </label>
+      <h6>ימי עבודה בשבוע :</h6>
+      <p>{{guide.workingDays}}</p>
+      <h6>שפות הדרכה:</h6>
+      <p>{{guide.languages}}</p>
+    </div>
+    <!-- </span> -->
+    <button *ngIf="isGuidesForChoose" mat-raised-button id="add" (click)="addGuideToTrip(guide,dateChoose)">בחר
+      לטיול</button>
+  </div>
+</div>
+
+

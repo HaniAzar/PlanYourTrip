@@ -1,0 +1,82 @@
+div {
+  text-align: center;
+}
+#signUpDiv {
+  display: inline-block;
+  margin-left: 14vw;
+  vertical-align: top;
+  border-width: 0.1vw;
+  height: 70vh;
+  width: 30vw;
+  margin-top: 7vh;
+}
+
+#signInDiv {
+  display: inline-block;
+  margin-left: 4vw;
+  margin-bottom: 10vh;
+  vertical-align: top;
+  border-width: 0.1vw;
+  height: 70vh;
+  width: 30vw;
+  margin-top: 7vh;
+  a {
+    cursor: pointer;
+    color: blue;
+  }
+}
+::ng-deep .input[type="button"].btn-block,
+input[type="reset"].btn-block,
+input[type="submit"].btn-block {
+  border-radius: 1vw !important;
+  border-width: 0.099vw !important;
+}
+#ok {
+  label,
+  a {
+    font-size: 0.8vw;
+  }
+  a {
+    cursor: pointer;
+    color: blue;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    display: none;
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    display: block;
+  }
+}
+
+#or {
+  label {
+    animation-name: fadeInDown;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+  }
+  font-size: 2vw;
+  color: #0fbd25;
+  height: 2vh;
+  width: 2vw;
+  display: inline-block;
+  margin-top: 36vh;
+  margin-left: 4vw;
+}
+mat-icon {
+  color: #0fbd25;
+}
+#sitePolicy{
+  margin-right:1vw;
+}
+.mat-form-field-wrapper{
+    width: 18vw !important;
+}

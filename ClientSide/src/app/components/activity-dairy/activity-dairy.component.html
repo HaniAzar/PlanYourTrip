@@ -1,0 +1,12 @@
+<h3>
+  יומן פעילות מדריך
+</h3>
+<p>-ימי פעילות עם לקוחות-</p>
+
+<div id="dairy">
+  <full-calendar defaultView="dayGridMonth" deepChangeDetection="true" [plugins]="calendarPlugins" [weekends]="true"
+    [events]="calendarEvents" (eventClick)="ClickTitle($event)">
+  </full-calendar>
+</div>
+<!-- <button (click)="addEvent()">add</button> -->
+<!-- <button (click)="modifyTitle()">modify</button>  -->

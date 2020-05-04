@@ -1,0 +1,12 @@
+<div id="underDiv"></div>
+<div id="dialog">
+  <br><br>
+  <mat-dialog-content>
+    <h4>{{headerLogin}}</h4>
+    <p>{{textLogin}}</p>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button *ngIf="buttonLoginCancel" id="cencel" mat-button mat-dialog-close (click)="deleteTrip()">{{buttonLoginCancel}}</button>
+    <button *ngIf="buttonLoginOk" id="yes" mat-button mat-dialog-close (click)="IsSignIn()" cdkFocusInitial>{{buttonLoginOk}}</button>
+  </mat-dialog-actions>
+</div>

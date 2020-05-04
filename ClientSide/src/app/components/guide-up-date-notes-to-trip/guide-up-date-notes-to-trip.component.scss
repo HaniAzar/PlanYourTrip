@@ -1,0 +1,61 @@
+#updateDiv {
+  height: 78vh;
+  width: 34vw;
+  text-align: center;
+}
+#attractionTrip {
+  text-align: center;
+  width: 13vw;
+  height: 5vh;
+  border: solid;
+  border-width: 0.1vw;
+  border-color: #0fbd25;
+  display: inline-block;
+  margin-left: 0.5vw;
+  margin-top: 0.5vh;
+  mat-icon {
+    color: #404040;
+  }
+}
+body {
+  text-align: center;
+}
+#cencelTrip {
+  background-color: white;
+  border-color: red;
+  border: solid;
+  color: red;
+  border-width: 0.1vh;
+}
+#cancelChanges {
+  position: absolute;
+  top: 77.5vh;
+  margin-right: 1vw;
+}
+#ok {
+  margin-left: 8vw;
+}
+#ok,#cancelChanges{
+  border: solid;
+  border-width: 0.1vh;
+  border-color: #0fbd25;
+}
+button {
+  margin-left: 2vw;
+  color: #404040;
+  // border-color: #0fbd25;
+  // border: solid;
+}
+mat-form-field {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  display: inline-block;
+}
+h6 {
+  color: #0fbd25;
+  display: inline-block;
+  text-align: right;
+}
+h5 {
+  text-align: center;
+}

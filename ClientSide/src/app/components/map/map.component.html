@@ -1,0 +1,30 @@
+<div id="wrapper">
+      <mat-form-field *ngIf="myattractions">
+          <input autocomplete="off" matInput [(ngModel)]="search" placeholder="חפש על המפה">
+          <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+      <mat-drawer-container>
+          <mat-spinner *ngIf="!mapLoading" mode="indeterminate"></mat-spinner>
+          <agm-map [gestureHandling]="'cooperative'" (mapReady)="mapReady()" [latitude]="location.lat" [longitude]="location.lng" [zoom]="zoom">
+              <agm-marker (markerClick)="openSidebar(attraction.attractionName)" (markerClick)="drawer.open()"
+                  *ngFor="let attraction of myattractions | filterList:search " [latitude]="attraction.latitude"
+                  [longitude]="attraction.longitude" [title]="attraction.attractionName">
+              </agm-marker>
+          </agm-map>‏
+          <mat-drawer #drawer mode="side">
+              <div id="details" *ngIf="attraction">
+                  <mat-icon id="closeSideBar" (click)="drawer.close()">trending_flat</mat-icon>
+                  <h6>{{attraction.attractionName}}</h6><hr>
+                  <h6> סוג: </h6>
+                  <p *ngFor="let category of categories">* {{category}}</p>
+                  <h6>מאפיינים: </h6>
+                  <mat-icon *ngIf="attraction.entranceToWater" title="אפשרות כניסה למים">pool</mat-icon>
+                  <mat-icon *ngIf="attraction.accessibility" title="נגיש">accessible</mat-icon>
+                  <mat-icon *ngIf="attraction.isMatchGroups" title="מתאים לקבוצות">group</mat-icon>
+                  <mat-icon *ngIf="attraction.isMatchChildren" title="מתאים לילדים">face</mat-icon><br><br>
+                  <button mat-raised-button (click)="emitEvent(attraction.id)"><mat-icon>arrow_downward</mat-icon>לפרטים מלאים</button>
+              </div>
+          </mat-drawer>
+      </mat-drawer-container>
+  </div>
+  

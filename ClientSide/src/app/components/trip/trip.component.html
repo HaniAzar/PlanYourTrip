@@ -1,0 +1,39 @@
+<div id="dialogDiv">
+  <!-- <div id="forScroll"> -->
+    <h4>המסלול שלך: </h4>
+    <div>
+      <agm-map (mapReady)="mapReady()" id="maps"></agm-map>
+    </div>
+    <mat-form-field *ngIf="myattractions">
+      <label>מומלץ להכניס נקודת מוצא לחישוב המרחק מתחילת המסלול:</label>
+      <input autocomplete="off" matInput placeholder="הכנס כתובת">
+      <mat-icon matSuffix>home</mat-icon>
+    </mat-form-field>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="distanceDiv">
+            <h5 *ngFor="let distance of distanceList" class="distance">{{distance}} ק"מ</h5>
+          </div>
+          <ul class="timeline timeline-horizontal" *ngFor="let attraction of trip">
+            <li class="timeline-item">
+              <div class="timeline-badge primary">
+                <mat-icon>where_to_vote</mat-icon>
+              </div>
+              <div class="timeline-panel">
+                <a href="javascript:;" (click)="deleteAttractionFromTrip(attraction.id)" id="clear">
+                  <mat-icon title="הסר מהמסלול">clear</mat-icon>
+                </a>
+                <h4 class="timeline-title">{{attraction.attractionName}}</h4>
+              </div>
+            </li>
+            <p>{{far}}</p>
+          </ul>
+        </div>
+      </div>
+    <div id="actions">
+      <button mat-button mat-dialog-close>המשך בבחירת אתרים</button>
+      <button mat-button *ngIf="!isGuide" (click)="addGuide()">הוסף מדריך לטיול</button>
+      <button mat-button mat-dialog-close (click)="editTrip()"> סיום ועריכת המסלול</button>
+    </div>
+  </div>

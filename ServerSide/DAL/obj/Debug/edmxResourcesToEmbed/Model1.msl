@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Trips_DBModelStoreContainer" CdmEntityContainer="Trips_DB">
+    <EntitySetMapping Name="AttractionsToCategories">
+      <EntityTypeMapping TypeName="Trips_DBModel.AttractionsToCategories">
+        <MappingFragment StoreEntitySet="AttractionsToCategories">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="attractionId" ColumnName="attractionId" />
+          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AttractionsToGuidesTrips">
+      <EntityTypeMapping TypeName="Trips_DBModel.AttractionsToGuidesTrips">
+        <MappingFragment StoreEntitySet="AttractionsToGuidesTrips">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="tripId" ColumnName="tripId" />
+          <ScalarProperty Name="attractionId" ColumnName="attractionId" />
+          <ScalarProperty Name="distance" ColumnName="distance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AttractionsToUsersTrips">
+      <EntityTypeMapping TypeName="Trips_DBModel.AttractionsToUsersTrips">
+        <MappingFragment StoreEntitySet="AttractionsToUsersTrips">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="tripId" ColumnName="tripId" />
+          <ScalarProperty Name="attractionId" ColumnName="attractionId" />
+          <ScalarProperty Name="distance" ColumnName="distance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="Trips_DBModel.Categories">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GuideActivityDiary">
+      <EntityTypeMapping TypeName="Trips_DBModel.GuideActivityDiary">
+        <MappingFragment StoreEntitySet="GuideActivityDiary">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="guideId" ColumnName="guideId" />
+          <ScalarProperty Name="activityDate" ColumnName="activityDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GuidesForJoiningToSite">
+      <EntityTypeMapping TypeName="Trips_DBModel.GuidesForJoiningToSite">
+        <MappingFragment StoreEntitySet="GuidesForJoiningToSite">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="guideName" ColumnName="guideName" />
+          <ScalarProperty Name="eMail" ColumnName="eMail" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="languages" ColumnName="languages" />
+          <ScalarProperty Name="workingDays" ColumnName="workingDays" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="details" ColumnName="details" />
+          <ScalarProperty Name="profile" ColumnName="profile" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImagesUrl">
+      <EntityTypeMapping TypeName="Trips_DBModel.ImagesUrl">
+        <MappingFragment StoreEntitySet="ImagesUrl">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="attractionId" ColumnName="attractionId" />
+          <ScalarProperty Name="imgUrl" ColumnName="imgUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TourGuides">
+      <EntityTypeMapping TypeName="Trips_DBModel.TourGuides">
+        <MappingFragment StoreEntitySet="TourGuides">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="guideName" ColumnName="guideName" />
+          <ScalarProperty Name="eMail" ColumnName="eMail" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="languages" ColumnName="languages" />
+          <ScalarProperty Name="workingDays" ColumnName="workingDays" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="details" ColumnName="details" />
+          <ScalarProperty Name="profile" ColumnName="profile" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TouristAttractions">
+      <EntityTypeMapping TypeName="Trips_DBModel.TouristAttractions">
+        <MappingFragment StoreEntitySet="TouristAttractions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="attractionName" ColumnName="attractionName" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="payment" ColumnName="payment" />
+          <ScalarProperty Name="seasson" ColumnName="seasson" />
+          <ScalarProperty Name="openningHour" ColumnName="openningHour" />
+          <ScalarProperty Name="closingHour" ColumnName="closingHour" />
+          <ScalarProperty Name="accessibility" ColumnName="accessibility" />
+          <ScalarProperty Name="hardnessLevel" ColumnName="hardnessLevel" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="entranceToWater" ColumnName="entranceToWater" />
+          <ScalarProperty Name="isMatchGroups" ColumnName="isMatchGroups" />
+          <ScalarProperty Name="isMatchChildren" ColumnName="isMatchChildren" />
+          <ScalarProperty Name="isMatchFamilies" ColumnName="isMatchFamilies" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="estimatedTime" ColumnName="estimatedTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TripsForJoining">
+      <EntityTypeMapping TypeName="Trips_DBModel.TripsForJoining">
+        <MappingFragment StoreEntitySet="TripsForJoining">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="guideId" ColumnName="guideId" />
+          <ScalarProperty Name="maxOfTourists" ColumnName="maxOfTourists" />
+          <ScalarProperty Name="numOfSavedTourists" ColumnName="numOfSavedTourists" />
+          <ScalarProperty Name="tripDate" ColumnName="tripDate" />
+          <ScalarProperty Name="leavingTime" ColumnName="leavingTime" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="Trips_DBModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="eMail" ColumnName="eMail" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsersTrips">
+      <EntityTypeMapping TypeName="Trips_DBModel.UsersTrips">
+        <MappingFragment StoreEntitySet="UsersTrips">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="guideId" ColumnName="guideId" />
+          <ScalarProperty Name="tripDate" ColumnName="tripDate" />
+          <ScalarProperty Name="isSentRequest" ColumnName="isSentRequest" />
+          <ScalarProperty Name="disagreeTrip" ColumnName="disagreeTrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WaitingAttractions">
+      <EntityTypeMapping TypeName="Trips_DBModel.WaitingAttractions">
+        <MappingFragment StoreEntitySet="WaitingAttractions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="attractionName" ColumnName="attractionName" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="payment" ColumnName="payment" />
+          <ScalarProperty Name="seasson" ColumnName="seasson" />
+          <ScalarProperty Name="openningHour" ColumnName="openningHour" />
+          <ScalarProperty Name="closingHour" ColumnName="closingHour" />
+          <ScalarProperty Name="accessibility" ColumnName="accessibility" />
+          <ScalarProperty Name="hardnessLevel" ColumnName="hardnessLevel" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="entranceToWater" ColumnName="entranceToWater" />
+          <ScalarProperty Name="isMatchGroups" ColumnName="isMatchGroups" />
+          <ScalarProperty Name="isMatchChildren" ColumnName="isMatchChildren" />
+          <ScalarProperty Name="isMatchFamilies" ColumnName="isMatchFamilies" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="categories" ColumnName="categories" />
+          <ScalarProperty Name="estimatedTime" ColumnName="estimatedTime" />
+          <ScalarProperty Name="isEdit" ColumnName="isEdit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WaitingAttractionsImages">
+      <EntityTypeMapping TypeName="Trips_DBModel.WaitingAttractionsImages">
+        <MappingFragment StoreEntitySet="WaitingAttractionsImages">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="waitingAttractionId" ColumnName="waitingAttractionId" />
+          <ScalarProperty Name="imgUrl" ColumnName="imgUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="writtenDownUsers">
+      <EntityTypeMapping TypeName="Trips_DBModel.writtenDownUsers">
+        <MappingFragment StoreEntitySet="writtenDownUsers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="tripForJoiningId" ColumnName="tripForJoiningId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="numOfTourists" ColumnName="numOfTourists" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,40 @@
+<div>
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>תאריך הטיול</th>
+        <th>שם משתמש</th>
+        <th>מייל ליצירת קשר</th>
+        <th>המסלול</th>
+        <th>אישור הדרכה</th>
+        <th>אי הסכמה להדרכה</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let trip of requests">
+      <td *ngIf="trip.tripDate">{{trip.tripDate|date}}</td>
+      <td *ngIf="users[trip.id]">{{users[trip.id].userName}}</td>
+      <td *ngIf="users[trip.id]">{{users[trip.id].eMail}}</td>
+      <td>
+        <p *ngFor="let attraction of attractionsForTrip[trip.id]">{{attraction.attractionName}}</p>
+      </td>
+      <td>
+        <a href="javascript:;" (click)="GuideAgree(trip)">
+          <mat-icon>done</mat-icon>
+        </a>
+      </td>
+      <td>
+        <a *ngIf="!trip.disagreeTrip && firstClick==false" href="javascript:;"
+          (click)="trip.disagreeTrip=true; firstClick=!firstClick">
+          <mat-icon>clear</mat-icon>
+        </a>
+        <div id="ifAgree" *ngIf="trip.disagreeTrip">
+          <p id="x" (click)="firstClick=!firstClick;trip.disagreeTrip=!trip.disagreeTrip">x</p>
+          <mat-form-field>
+            <textarea [id]="'request' + trip.id" matInput placeholder="סיבת אי ההסכמה" [(ngModel)]='cause'></textarea>
+          </mat-form-field>
+          <button mat-raised-button (click)="GuideDisagree(trip); trip.disagree=false">שלח</button>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>

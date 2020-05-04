@@ -1,0 +1,63 @@
+<h5>עדכון פרטים בטיול מאורגן</h5><br>
+<div id="updateDiv">
+  <!-- <mat-icon >highlight_off</mat-icon> -->
+  <mat-form-field>
+    <input matInput placeholder="הכנס שם אתר להוספה לטיול" [(ngModel)]="attractionName">
+  </mat-form-field>
+  <button mat-raised-button (click)="addAttractionToTrip(attractionName)">הוסף למסלול</button>
+  <div *ngIf="isExistAttraction ">
+    <label> האם התכוונת להוסיף למסלול שלך את -</label>
+    <label *ngIf="addAttraction"> {{addAttraction.attractionName}} </label>
+    <button mat-raised-button (click)="yesThisIsAttraction()">כן</button>
+  </div>
+
+  <div *ngIf="AskIfAddAtraction">
+    <label>לא קיים אתר כזה במערכת </label>
+    <a routerLink="/planYourTrip/addAttraction" mat-dialog-close routerLinkActive="active"> להוספת </a>
+    <label>אתר</label>
+  </div>
+  <br>
+  <br>
+
+  <form [formGroup]="updateTrip" (ngSubmit)="onSubmit(updateTrip.value)">
+    <div id="attractionTrip" *ngFor="let attraction of attractions">
+      <label *ngIf="attraction">{{attraction.attractionName}}</label>
+      <a href="javascript:;" (click)="cencelAttrctionFromTrip(attraction)">
+        <mat-icon>clear</mat-icon>
+      </a>
+    </div><br>
+    <br>
+    <br>
+    <h6>שעת יציאה - </h6>
+    <mat-form-field>
+      <input matInput formControlName="leavingTime" [value]='tripsJoining.leavingTime' atp-time-picker
+        placeholder="שעת יציאה" />
+    </mat-form-field>
+    <br>
+    <h6>הערות - </h6>
+    <mat-form-field>
+      <textarea matInput maxlength="100" placeholder="הערות" [value]="tripsJoining.notes"
+        formControlName="notes"></textarea>
+    </mat-form-field>
+    <br>
+    <h6>מקסימום משתתפים - </h6>
+    <mat-form-field>
+      <input type="text" matInput placeholder="מקסימום משתתפים" formControlName="maxOfTourists"
+        [value]="tripsJoining.maxOfTourists">
+      <mat-error *ngIf="updateTrip.get('maxOfTourists').hasError('pattern')">הכנס רק מספרים</mat-error>
+      <mat-error *ngIf="maxOfTourists.hasError('minlength')">xxxxx</mat-error>
+      <!-- *ngIf="signUpUser.controls['password'].hasError('minlength')" -->
+      <!-- ///////////////////////////////////////////////////////////// -->
+              <!-- <mat-error *ngIf="updateTrip.get('maxOfTourists').hasError('minlength')"> מקסימום משתתפים חייב ליהיות גדול ממה
+        שקיים
+      </mat-error> -->
+    </mat-form-field><br>
+    <br>
+    <!-- [disabled]="editDetailsForm.invalid" -->
+    <button id="ok" mat-raised-button type="submit" name="submit">שמור שינויים</button>
+  
+  </form>
+    <button id="cancelChanges" mat-raised-button (click)="cencelChanges()">ביטול</button>
+  <br>
+  <button mat-raised-button id="cencelTrip" (click)="cencelTrip()">ביטול טיול מאורגן</button>
+</div>

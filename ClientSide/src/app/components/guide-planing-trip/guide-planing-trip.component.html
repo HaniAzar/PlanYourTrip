@@ -1,0 +1,41 @@
+<div id="underDiv"></div>
+<div id="detailesTrip">
+  <!-- <mat-icon id="close" (click)="closeDialog()">close</mat-icon> -->
+  <h5>הכנס פרטי טיול מתוכנן</h5>
+  <hr>
+  <form [formGroup]="planingGuideForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input matInput placeholder="מקסימום משתתפים" formControlName="maxTourist">
+      <mat-error *ngIf="planingGuideForm.get('maxTourist').hasError('required')">שדה חובה</mat-error>
+      <mat-error *ngIf="planingGuideForm.get('maxTourist').hasError('pattern')">רק מספרים</mat-error>
+      <mat-error *ngIf="planingGuideForm.get('maxTourist').hasError('maxLength')">מקסימום</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width" (click)="checkedDate()">
+      <input matInput autocomplete="off" [matDatepicker]="picker" placeholder="תאריך יציאה" formControlName="tripDate">
+      <mat-datepicker-toggle matSuffix [for]="picker">
+        <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+      </mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error *ngIf="planingGuideForm.get('tripDate').hasError('required')">שדה חובה</mat-error>
+    </mat-form-field>
+    <!-- <p *ngIf="anoutherDate">בחר תאריך נכון</p> -->
+    <br>
+    <mat-form-field>
+      <input matInput autocomplete="off" formControlName="leavingTime" atp-time-picker placeholder="שעת יציאה" />
+      <!-- <mat-error *ngIf="planingGuideForm.get('leavingTime').hasError('required')">שדה חובה</mat-error> -->
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput type="number" placeholder="מחיר" formControlName="priceTrip">
+      <mat-error *ngIf="planingGuideForm.get('priceTrip').hasError('required')">שדה חובה</mat-error>
+      <mat-error *ngIf="planingGuideForm.get('priceTrip').hasError('pattern')">רק מספרים</mat-error>
+      <mat-icon matSuffix>family</mat-icon>
+    </mat-form-field>
+    <br>
+    <textarea rows="4" cols="25" formControlName="notes" placeholder="הערות ועדכונים"></textarea>
+    <br>
+    <button id="ok" mat-raised-button type="submit" value="אישור">אישור</button>
+  </form>
+</div>
+<!-- [disabeld]="planingGuideForm.invalid" -->

@@ -1,0 +1,54 @@
+E:\פרויקט גמר\PlanYourTrip\ServerSide\DAL\bin\Debug\DAL.dll.config
+E:\פרויקט גמר\PlanYourTrip\ServerSide\DAL\bin\Debug\DAL.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\DAL\bin\Debug\DAL.pdb
+E:\פרויקט גמר\PlanYourTrip\ServerSide\DAL\bin\Debug\BLL.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\DAL\bin\Debug\EntityFramework.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\DAL\bin\Debug\BLL.pdb
+E:\פרויקט גמר\PlanYourTrip\ServerSide\DAL\bin\Debug\EntityFramework.xml
+E:\פרויקט גמר\PlanYourTrip\ServerSide\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\פרויקט גמר\PlanYourTrip\ServerSide\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+E:\פרויקט גמר\PlanYourTrip\ServerSide\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\פרויקט גמר\PlanYourTrip\ServerSide\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\פרויקט גמר\PlanYourTrip\ServerSide\DAL\obj\Debug\DAL.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\DAL\obj\Debug\DAL.pdb
+C:\Users\User\Desktop\ServerSide\DAL\bin\Debug\DAL.dll.config
+C:\Users\User\Desktop\ServerSide\DAL\bin\Debug\DAL.dll
+C:\Users\User\Desktop\ServerSide\DAL\bin\Debug\DAL.pdb
+C:\Users\User\Desktop\ServerSide\DAL\bin\Debug\BLL.dll
+C:\Users\User\Desktop\ServerSide\DAL\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\ServerSide\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\ServerSide\DAL\bin\Debug\BLL.pdb
+C:\Users\User\Desktop\ServerSide\DAL\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\ServerSide\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\ServerSide\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\ServerSide\DAL\obj\Debug\DAL.dll
+C:\Users\User\Desktop\ServerSide\DAL\obj\Debug\DAL.pdb
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\DAL\bin\Debug\DAL.dll.config
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\DAL\bin\Debug\DAL.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\DAL\bin\Debug\DAL.pdb
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\DAL\bin\Debug\BLL.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\DAL\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\DAL\bin\Debug\BLL.pdb
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\DAL\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\DAL\obj\Debug\DAL.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\DAL\obj\Debug\DAL.pdb
+G:\ServerSide\DAL\bin\Debug\DAL.dll.config
+G:\ServerSide\DAL\bin\Debug\DAL.dll
+G:\ServerSide\DAL\bin\Debug\DAL.pdb
+G:\ServerSide\DAL\bin\Debug\BLL.dll
+G:\ServerSide\DAL\bin\Debug\EntityFramework.dll
+G:\ServerSide\DAL\bin\Debug\EntityFramework.SqlServer.dll
+G:\ServerSide\DAL\bin\Debug\BLL.pdb
+G:\ServerSide\DAL\bin\Debug\EntityFramework.xml
+G:\ServerSide\DAL\bin\Debug\EntityFramework.SqlServer.xml
+G:\ServerSide\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+G:\ServerSide\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+G:\ServerSide\DAL\obj\Debug\DAL.csproj.CopyComplete
+G:\ServerSide\DAL\obj\Debug\DAL.dll
+G:\ServerSide\DAL\obj\Debug\DAL.pdb
+C:\Users\User\Desktop\ServerSide\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache

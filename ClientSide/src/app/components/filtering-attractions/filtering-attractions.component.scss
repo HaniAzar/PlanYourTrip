@@ -1,0 +1,371 @@
+mat-checkbox {
+  direction: rtl;
+  margin-right: 1vw;
+  font-size: 2.5vh;
+}
+ngb-carousel {
+  border: solid 0.5px;
+  width: 36.5vw;
+  height: 49.5vh;
+  display: inline-flex;
+  position: absolute;
+  left: 0.6vw;
+  margin-top: 7.5vh;
+}
+mat-form-field {
+  float: left;
+  top: -3vh;
+}
+agm-map {
+  height: 20vh;
+  width: 20vw;
+}
+mat-icon {
+  color: #0fbd25;
+}
+.results {
+  margin-top: 0.5vh;
+}
+#drop {
+  font-size: 5vh;
+  cursor: pointer;
+  margin-right: 2vw;
+}
+ngb-pagination ::ng-deep ul > li:not(.active) > a {
+  border-color: #0fbd25;
+  color: black;
+}
+
+ngb-pagination ::ng-deep ul > li.active > a {
+  background-color: #0fbd25 !important;
+  border-color: #0fbd25;
+  color: white;
+  box-shadow: none;
+}
+#wrap {
+  width: 100%;
+  text-align: center;
+}
+#imgDiv {
+  width: 36.5vw;
+  height: 49.5vh;
+}
+#noImg {
+  border: solid;
+  width: 36.5vw;
+  height: 49.5vh;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+#mapContainer {
+  text-align: right;
+  padding-right: 1.5vw;
+  display: inline-block;
+}
+#attractionName {
+  margin-left: 38vw;
+}
+#newTrip {
+  width: 14vw;
+  height: 5vh;
+  position: absolute;
+  left: 3vw;
+  font-size: 3vh;
+  display: inline-block;
+  display: inline-block;
+  z-index: 4;
+  margin-top: -8.5vh;
+}
+#attractionResults {
+  width: 60vw;
+  margin-top: 2vh;
+  font-size: 3vh;
+  margin-right: 1vw;
+  height: 6.5vh;
+  border-bottom: solid 1px #404040;
+  padding-right: 3vw;
+  margin-bottom: 2vh;
+}
+
+label {
+  margin-left: 1vw;
+}
+div {
+  hr {
+    border-top: 3px dashed #404040;
+  }
+}
+.mat-expansion-panel-header-title {
+  width: 6vw !important;
+}
+#addToTrip {
+  margin-right: 24vw;
+  width: 14vw;
+}
+#link {
+  font-weight: 500;
+}
+div {
+  text-align: right;
+}
+p {
+  line-height: 1.7;
+}
+h6 {
+  margin-right: 1vw;
+  color: #0fbd25;
+}
+h5 {
+  display: inline-block;
+}
+h4 {
+  text-align: center;
+}
+.green {
+  color: #0fbd25;
+}
+.show {
+  display: block;
+  animation: 1s alternate-reverse;
+}
+.unShow {
+  display: none;
+}
+#filterByName {
+  margin-right: 1vw;
+}
+#filtering {
+  margin-right: 1.5vw;
+  margin-left: 2vw;
+  border: solid;
+  padding: 4vh;
+  height: 50vh;
+  width: 96vw;
+  margin-bottom: 2vh;
+  border: solid 1px #292929;
+  // background-color:# ;
+  z-index: -1;
+}
+// #louding{
+//   margin-right: 1.5vw;
+//   margin-left: 2vw;
+//   height: 50vh;
+//   width: 96vw;
+//   // background-color: black;
+//  opacity: 0.5;
+//   margin-bottom: 2vh;
+//   z-index: 2;
+// }
+.openDiv {
+  -webkit-animation: 0.5s openDiv;
+  animation: 0.5s openDiv;
+}
+.closeDiv {
+  width: 0vw;
+  height: 0vh;
+  animation: 0.5s closeDiv;
+  overflow: hidden;
+}
+span {
+  text-align: left;
+}
+
+.filterDiv {
+  margin-bottom: 2vh;
+  display: inline-block;
+  text-align: right;
+  vertical-align: top;
+  direction: ltr;
+  width: 19vw;
+  height: 34vh;
+}
+#advertisment {
+  vertical-align: top;
+  margin-right: 1vw;
+  margin-top: -0.9vh;
+  display: inline-block;
+  width: 20vw;
+  height: 60vh;
+  border: solid 0.5px;
+  padding: 2vh;
+  border-color: #0fbd25;
+  label {
+    color: #0fbd25;
+    -webkit-animation-name: jackInTheBox;
+    animation-name: jackInTheBox;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    // animation-iteration-count: infinite;
+  }
+}
+#advertisment:hover {
+  border-bottom-color: #0fbd25;
+  border-top-color: #0fbd25;
+  border-left-color: #404040;
+  border-right-color: #404040;
+}
+#clickHere {
+  animation: flash 2s infinite;
+}
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.bounceInLeft {
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+@keyframes bounceInLeft {
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes jackInTheBox {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.1) rotate(30deg);
+    transform: scale(0.1) rotate(30deg);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+
+  50% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+    color: yellow;
+  }
+
+  70% {
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+    color: blue;
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    color: red;
+  }
+}
+
+.scrollbar {
+  overflow-x: hidden;
+}
+
+.force-overflow {
+  min-height: 25vh;
+}
+
+.categories::-webkit-scrollbar {
+  width: 0.4vw;
+  background-color: #f5f5f5;
+}
+.categories::-webkit-scrollbar-thumb {
+  background-color: #0fbd25;
+}
+
+button {
+  margin-top: 2vh;
+  background-color: #404040;
+  color: white;
+  font-size: 3vh;
+  width: 12vw;
+  height: 7vh;
+  text-align: center;
+}
+
+::ng-deep .carousel-item.active {
+  animation: fadein 1s linear;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.details {
+  margin-right: 1vw;
+  padding: 1vh;
+  vertical-align: top;
+  margin-top: 2vh;
+  border: solid 0.5px #404040;
+  height: 27vh;
+  width: 14vw;
+  overflow-y: auto;
+  direction: initial;
+  text-align: right;
+}
+#category {
+  width: 15vw;
+}
+#moreDetails {
+  border: solid 0.5px #404040;
+  height: 20.3vh;
+  width: 60vw;
+}
+#location,
+#match,
+#category,
+#contact {
+  display: inline-block;
+}
+.pagination > li > a,
+.pagination > li > span {
+  border-radius: 50% !important;
+  margin: 0 5px;
+}

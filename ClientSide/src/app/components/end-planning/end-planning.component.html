@@ -1,0 +1,76 @@
+<h4>מסלול הטיול שלך</h4>
+<hr>
+
+<button id="back" mat-raised-button (click)="back()">
+  חזרה
+  <mat-icon>arrow_right_alt</mat-icon>
+</button>
+<button id="addGuide" class="guideToTrip" *ngIf="user" (click)="addGuideToTrip()" mat-raised-button>
+  הוספת/שינוי מדריך לטיול
+</button>
+<h5 *ngIf="guideToTrip&&user">המדריך שבחרת הוא {{guideToTrip.guideName}}</h5>
+<button class="guideToTrip" *ngIf="guideToTrip" (click)="cencelGuideFromTrip()" mat-raised-button>
+  ביטול מדריך מהטיול
+</button>
+<div id="wrap">
+  <div class="div in-wrap">
+    <div class="row">
+      <div class="col-8" cdkDropList cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)">
+        <h5 id="note">גרור אתר כדי לשנות את סדר הטיול</h5>
+        <div class="wrap-distance">
+          <div id="distanceDiv">
+            <div *ngFor="let distance of distanceList" class="distance">
+              <h5>{{distance}} ק"מ</h5>
+              <div class="space-div"></div>
+            </div>
+          </div>
+
+          <div class="wrap-ul">
+            <ul class="timeline timeline-horizontal" *ngFor="let attraction of trip">
+              <li cdkDrag class="timeline-item">
+                <div class="timeline-panel">
+                  <a href="javascript:;" (click)="deleteAttractionFromTrip(attraction.id)" id="clear">
+                    <mat-icon title="הסר מהמסלול">clear</mat-icon>
+                  </a>
+                  <h4 class="timeline-title">{{attraction.attractionName}}</h4>
+                </div>
+              </li>
+              <div id="icon" class="timeline-badge primary">
+                <mat-icon>where_to_vote</mat-icon>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="map" class="div col-3">
+        <agm-map (mapReady)="mapReady()" [latitude]="32.610627" [longitude]="35.286393" [zoom]="9">
+          <ng-container *ngIf="tripPoints && tripPoints.length>0">
+            <agm-marker *ngFor="let point of tripPoints; let i=index" [latitude]="point.location.lat" [longitude]="point.location.lng" [label]="point.name">
+            </agm-marker>
+            <agm-polyline *ngIf="polyline" [strokeColor]="polyline.color">
+              <agm-polyline-point *ngFor="let point of tripPoints" [latitude]="point.location.lat" [longitude]="point.location.lng">
+              </agm-polyline-point>
+            </agm-polyline>
+          </ng-container>
+        </agm-map>
+      </div>
+    </div>
+
+    <div id="buttons" style="text-align: center">
+      <button class="buttons" *ngIf="!endOk" mat-button (click)="finalEnd()">
+        <mat-icon>done</mat-icon> סיום ואישור
+      </button>
+      <button class="buttons" *ngIf="endOk" mat-raised-button (click)="print()">
+        <mat-icon>print</mat-icon> הדפס
+      </button>
+      <button class="buttons" *ngIf="endOk" mat-raised-button (click)="sendEmail()">
+        <mat-icon>send</mat-icon>שלח פרטים למייל
+      </button>
+    </div>
+  </div>
+</div>
+<div id="bottom">
+  <hr>
+  <h4>Plan Your Trip מאחלים לך בהנאה בטיול, ומקווים שתמשיך להנות משירות האתר בעתיד.</h4>
+</div>

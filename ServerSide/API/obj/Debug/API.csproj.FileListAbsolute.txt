@@ -1,0 +1,329 @@
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\obj\Debug\API.csprojAssemblyReference.cache
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\ApplicationInsights.config
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\csc.exe
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\csc.exe.config
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\csc.rsp
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\csi.exe
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\csi.rsp
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\System.AppContext.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\System.Collections.Immutable.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\System.IO.FileSystem.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\System.Reflection.Metadata.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\vbc.exe
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\vbc.exe.config
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\vbc.rsp
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\VBCSCompiler.exe
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\roslyn\VBCSCompiler.exe.config
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\API.dll.config
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\API.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\API.pdb
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\Antlr3.Runtime.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\BLL.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\DAL.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\EntityFramework.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\EntityFramework.SqlServer.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\Microsoft.AI.Agent.Intercept.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\Microsoft.AI.DependencyCollector.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\Microsoft.AI.Web.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\Microsoft.AI.WindowsServer.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\Microsoft.ApplicationInsights.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\Microsoft.Web.Infrastructure.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\Newtonsoft.Json.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\System.Net.Http.Formatting.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\System.Web.Helpers.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\System.Web.Http.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\System.Web.Http.WebHost.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\System.Web.Mvc.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\System.Web.Optimization.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\System.Web.Razor.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\System.Web.WebPages.Deployment.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\System.Web.WebPages.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\System.Web.WebPages.Razor.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\WebGrease.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\BLL.pdb
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\DAL.pdb
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\DAL.dll.config
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\Newtonsoft.Json.xml
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\System.Net.Http.Formatting.xml
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\System.Web.Helpers.xml
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\System.Web.Http.xml
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\System.Web.Http.WebHost.xml
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\System.Web.Mvc.xml
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\System.Web.Optimization.xml
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\System.Web.Razor.xml
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\System.Web.WebPages.xml
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\System.Web.WebPages.Deployment.xml
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\System.Web.WebPages.Razor.xml
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\Antlr3.Runtime.pdb
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\Microsoft.ApplicationInsights.xml
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\Microsoft.AI.DependencyCollector.xml
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\Microsoft.AI.WindowsServer.xml
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\bin\Microsoft.AI.Web.xml
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\obj\Debug\API.csproj.CopyComplete
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\obj\Debug\API.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\API\obj\Debug\API.pdb
+C:\Users\User\Desktop\ServerSide\API\bin\ApplicationInsights.config
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\csc.exe
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\csc.exe.config
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\csc.rsp
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\csi.exe
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\csi.rsp
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\System.AppContext.dll
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\vbc.exe
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\vbc.exe.config
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\vbc.rsp
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\VBCSCompiler.exe
+C:\Users\User\Desktop\ServerSide\API\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\User\Desktop\ServerSide\API\bin\API.dll.config
+C:\Users\User\Desktop\ServerSide\API\bin\API.dll
+C:\Users\User\Desktop\ServerSide\API\bin\API.pdb
+C:\Users\User\Desktop\ServerSide\API\bin\Antlr3.Runtime.dll
+C:\Users\User\Desktop\ServerSide\API\bin\BLL.dll
+C:\Users\User\Desktop\ServerSide\API\bin\DAL.dll
+C:\Users\User\Desktop\ServerSide\API\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\User\Desktop\ServerSide\API\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\User\Desktop\ServerSide\API\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\User\Desktop\ServerSide\API\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\User\Desktop\ServerSide\API\bin\Microsoft.AI.Web.dll
+C:\Users\User\Desktop\ServerSide\API\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\User\Desktop\ServerSide\API\bin\Microsoft.ApplicationInsights.dll
+C:\Users\User\Desktop\ServerSide\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\User\Desktop\ServerSide\API\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\User\Desktop\ServerSide\API\bin\Newtonsoft.Json.dll
+C:\Users\User\Desktop\ServerSide\API\bin\System.Net.Http.Formatting.dll
+C:\Users\User\Desktop\ServerSide\API\bin\System.Web.Cors.dll
+C:\Users\User\Desktop\ServerSide\API\bin\System.Web.Helpers.dll
+C:\Users\User\Desktop\ServerSide\API\bin\System.Web.Http.Cors.dll
+C:\Users\User\Desktop\ServerSide\API\bin\System.Web.Http.dll
+C:\Users\User\Desktop\ServerSide\API\bin\System.Web.Http.WebHost.dll
+C:\Users\User\Desktop\ServerSide\API\bin\System.Web.Mvc.dll
+C:\Users\User\Desktop\ServerSide\API\bin\System.Web.Optimization.dll
+C:\Users\User\Desktop\ServerSide\API\bin\System.Web.Razor.dll
+C:\Users\User\Desktop\ServerSide\API\bin\System.Web.WebPages.Deployment.dll
+C:\Users\User\Desktop\ServerSide\API\bin\System.Web.WebPages.dll
+C:\Users\User\Desktop\ServerSide\API\bin\System.Web.WebPages.Razor.dll
+C:\Users\User\Desktop\ServerSide\API\bin\WebGrease.dll
+C:\Users\User\Desktop\ServerSide\API\bin\BLL.pdb
+C:\Users\User\Desktop\ServerSide\API\bin\DAL.pdb
+C:\Users\User\Desktop\ServerSide\API\bin\DAL.dll.config
+C:\Users\User\Desktop\ServerSide\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\User\Desktop\ServerSide\API\bin\System.Net.Http.Formatting.xml
+C:\Users\User\Desktop\ServerSide\API\bin\System.Web.Http.xml
+C:\Users\User\Desktop\ServerSide\API\bin\System.Web.Http.Cors.xml
+C:\Users\User\Desktop\ServerSide\API\bin\Newtonsoft.Json.xml
+C:\Users\User\Desktop\ServerSide\API\bin\System.Web.Helpers.xml
+C:\Users\User\Desktop\ServerSide\API\bin\System.Web.Http.WebHost.xml
+C:\Users\User\Desktop\ServerSide\API\bin\System.Web.Mvc.xml
+C:\Users\User\Desktop\ServerSide\API\bin\System.Web.Optimization.xml
+C:\Users\User\Desktop\ServerSide\API\bin\System.Web.Razor.xml
+C:\Users\User\Desktop\ServerSide\API\bin\System.Web.WebPages.xml
+C:\Users\User\Desktop\ServerSide\API\bin\System.Web.WebPages.Deployment.xml
+C:\Users\User\Desktop\ServerSide\API\bin\System.Web.WebPages.Razor.xml
+C:\Users\User\Desktop\ServerSide\API\bin\Antlr3.Runtime.pdb
+C:\Users\User\Desktop\ServerSide\API\bin\Microsoft.ApplicationInsights.xml
+C:\Users\User\Desktop\ServerSide\API\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\User\Desktop\ServerSide\API\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\User\Desktop\ServerSide\API\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\User\Desktop\ServerSide\API\bin\Microsoft.AI.Web.xml
+C:\Users\User\Desktop\ServerSide\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\ServerSide\API\obj\Debug\API.dll
+C:\Users\User\Desktop\ServerSide\API\obj\Debug\API.pdb
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\ApplicationInsights.config
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\csc.exe
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\csc.exe.config
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\csc.rsp
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\csi.exe
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\csi.rsp
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\System.AppContext.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\vbc.exe
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\vbc.exe.config
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\vbc.rsp
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\VBCSCompiler.exe
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\API.dll.config
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\API.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\API.pdb
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\Antlr3.Runtime.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\BLL.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\DAL.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\Microsoft.AI.Web.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\Microsoft.ApplicationInsights.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\Newtonsoft.Json.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\System.Net.Http.Formatting.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\System.Web.Cors.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\System.Web.Helpers.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\System.Web.Http.Cors.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\System.Web.Http.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\System.Web.Http.WebHost.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\System.Web.Mvc.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\System.Web.Optimization.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\System.Web.Razor.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\System.Web.WebPages.Deployment.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\System.Web.WebPages.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\System.Web.WebPages.Razor.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\WebGrease.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\BLL.pdb
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\DAL.pdb
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\DAL.dll.config
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\System.Net.Http.Formatting.xml
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\System.Web.Http.xml
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\System.Web.Http.Cors.xml
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\Newtonsoft.Json.xml
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\System.Web.Helpers.xml
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\System.Web.Http.WebHost.xml
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\System.Web.Mvc.xml
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\System.Web.Optimization.xml
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\System.Web.Razor.xml
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\System.Web.WebPages.xml
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\System.Web.WebPages.Deployment.xml
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\System.Web.WebPages.Razor.xml
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\Antlr3.Runtime.pdb
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\Microsoft.ApplicationInsights.xml
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\bin\Microsoft.AI.Web.xml
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\obj\Debug\API.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\obj\Debug\API.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\API\obj\Debug\API.pdb
+G:\ServerSide\API\bin\ApplicationInsights.config
+G:\ServerSide\API\bin\roslyn\csc.exe
+G:\ServerSide\API\bin\roslyn\csc.exe.config
+G:\ServerSide\API\bin\roslyn\csc.rsp
+G:\ServerSide\API\bin\roslyn\csi.exe
+G:\ServerSide\API\bin\roslyn\csi.rsp
+G:\ServerSide\API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\ServerSide\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\ServerSide\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+G:\ServerSide\API\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\ServerSide\API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+G:\ServerSide\API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\ServerSide\API\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\ServerSide\API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+G:\ServerSide\API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+G:\ServerSide\API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\ServerSide\API\bin\roslyn\System.AppContext.dll
+G:\ServerSide\API\bin\roslyn\System.Collections.Immutable.dll
+G:\ServerSide\API\bin\roslyn\System.Diagnostics.StackTrace.dll
+G:\ServerSide\API\bin\roslyn\System.IO.FileSystem.dll
+G:\ServerSide\API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+G:\ServerSide\API\bin\roslyn\System.Reflection.Metadata.dll
+G:\ServerSide\API\bin\roslyn\vbc.exe
+G:\ServerSide\API\bin\roslyn\vbc.exe.config
+G:\ServerSide\API\bin\roslyn\vbc.rsp
+G:\ServerSide\API\bin\roslyn\VBCSCompiler.exe
+G:\ServerSide\API\bin\roslyn\VBCSCompiler.exe.config
+G:\ServerSide\API\bin\API.dll.config
+G:\ServerSide\API\bin\API.dll
+G:\ServerSide\API\bin\API.pdb
+G:\ServerSide\API\bin\Antlr3.Runtime.dll
+G:\ServerSide\API\bin\BLL.dll
+G:\ServerSide\API\bin\DAL.dll
+G:\ServerSide\API\bin\Microsoft.AI.Agent.Intercept.dll
+G:\ServerSide\API\bin\Microsoft.AI.DependencyCollector.dll
+G:\ServerSide\API\bin\Microsoft.AI.PerfCounterCollector.dll
+G:\ServerSide\API\bin\Microsoft.AI.ServerTelemetryChannel.dll
+G:\ServerSide\API\bin\Microsoft.AI.Web.dll
+G:\ServerSide\API\bin\Microsoft.AI.WindowsServer.dll
+G:\ServerSide\API\bin\Microsoft.ApplicationInsights.dll
+G:\ServerSide\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\ServerSide\API\bin\Microsoft.Web.Infrastructure.dll
+G:\ServerSide\API\bin\Newtonsoft.Json.dll
+G:\ServerSide\API\bin\System.Net.Http.Formatting.dll
+G:\ServerSide\API\bin\System.Web.Cors.dll
+G:\ServerSide\API\bin\System.Web.Helpers.dll
+G:\ServerSide\API\bin\System.Web.Http.Cors.dll
+G:\ServerSide\API\bin\System.Web.Http.dll
+G:\ServerSide\API\bin\System.Web.Http.WebHost.dll
+G:\ServerSide\API\bin\System.Web.Mvc.dll
+G:\ServerSide\API\bin\System.Web.Optimization.dll
+G:\ServerSide\API\bin\System.Web.Razor.dll
+G:\ServerSide\API\bin\System.Web.WebPages.Deployment.dll
+G:\ServerSide\API\bin\System.Web.WebPages.dll
+G:\ServerSide\API\bin\System.Web.WebPages.Razor.dll
+G:\ServerSide\API\bin\WebGrease.dll
+G:\ServerSide\API\bin\BLL.pdb
+G:\ServerSide\API\bin\DAL.pdb
+G:\ServerSide\API\bin\DAL.dll.config
+G:\ServerSide\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\ServerSide\API\bin\System.Net.Http.Formatting.xml
+G:\ServerSide\API\bin\System.Web.Http.xml
+G:\ServerSide\API\bin\System.Web.Http.Cors.xml
+G:\ServerSide\API\bin\Newtonsoft.Json.xml
+G:\ServerSide\API\bin\System.Web.Helpers.xml
+G:\ServerSide\API\bin\System.Web.Http.WebHost.xml
+G:\ServerSide\API\bin\System.Web.Mvc.xml
+G:\ServerSide\API\bin\System.Web.Optimization.xml
+G:\ServerSide\API\bin\System.Web.Razor.xml
+G:\ServerSide\API\bin\System.Web.WebPages.xml
+G:\ServerSide\API\bin\System.Web.WebPages.Deployment.xml
+G:\ServerSide\API\bin\System.Web.WebPages.Razor.xml
+G:\ServerSide\API\bin\Antlr3.Runtime.pdb
+G:\ServerSide\API\bin\Microsoft.ApplicationInsights.xml
+G:\ServerSide\API\bin\Microsoft.AI.DependencyCollector.xml
+G:\ServerSide\API\bin\Microsoft.AI.ServerTelemetryChannel.xml
+G:\ServerSide\API\bin\Microsoft.AI.WindowsServer.xml
+G:\ServerSide\API\bin\Microsoft.AI.Web.xml
+G:\ServerSide\API\obj\Debug\API.csprojAssemblyReference.cache
+G:\ServerSide\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+G:\ServerSide\API\obj\Debug\API.csproj.CopyComplete
+G:\ServerSide\API\obj\Debug\API.dll
+G:\ServerSide\API\obj\Debug\API.pdb
+C:\Users\User\Desktop\ServerSide\API\obj\Debug\API.csprojResolveAssemblyReference.cache

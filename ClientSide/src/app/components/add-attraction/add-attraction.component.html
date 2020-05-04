@@ -1,0 +1,444 @@
+<!-- <div>
+  <h4>הוספת אתר ל - Plan Your Trip</h4>
+  <hr>
+  <form [formGroup]="addAttractionForm" (ngSubmit)="onSubmit()">
+    <div id="firstDetails">
+      <mat-form-field>
+        <input matInput placeholder=" * שם האתר " formControlName="attractionName">
+        <mat-error *ngIf="addAttractionForm.get('attractionName').hasError('required')">שדה חובה</mat-error>
+        <mat-error *ngIf="addAttractionForm.get('attractionName').hasError('minlength')">מינימום תווים</mat-error>
+        <mat-error *ngIf="addAttractionForm.get('attractionName').hasError('pattern')"></mat-error>
+        <mat-icon matSuffix>nature</mat-icon>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <input matInput placeholder="* כתובת / מיקום " formControlName="address" autocomplete="off">
+        <mat-error *ngIf="addAttractionForm.get('address').hasError('required')">שדה חובה</mat-error>
+        <mat-error *ngIf="addAttractionForm.get('address').hasError('minlength')">מינימום תווים</mat-error>
+        <mat-icon matSuffix>pin_drop</mat-icon>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <input autocomplete="off" matInput placeholder="מספר טלפון " formControlName="phoneNumber">
+        <mat-error *ngIf="addAttractionForm.get('phoneNumber').hasError('required')">שדה חובה</mat-error>
+        <mat-error *ngIf="addAttractionForm.get('phoneNumber').hasError('minlength')">מינימום תווים</mat-error>
+        <mat-error *ngIf="addAttractionForm.get('phoneNumber').hasError('pattern')">רק מספרים</mat-error>
+        <mat-icon matSuffix>phone</mat-icon>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <input matInput placeholder="כתובת אינטרנט של האתר" formControlName="http">
+        <mat-error *ngIf="addAttractionForm.get('http').hasError('required')">שדה חובה</mat-error>
+        <mat-error *ngIf="addAttractionForm.get('http').hasError('minlength')">מינימום תווים</mat-error>
+      </mat-form-field>
+      <br>
+      <label>* אזור בארץ: </label><br>
+      <mat-radio-button (click)="saveArea(area)" *ngFor="let area of areaAttraction">{{area}}</mat-radio-button>
+      <br>
+    </div>
+    <br>
+    <hr><br>
+
+    <div id="secondDetails">
+      <label> עונה מומלצת: </label><br>
+      <mat-checkbox (click)="saveSeasson(seasson)" *ngFor="let seasson of seassonAttraction" formControlName="seasson">
+        {{seasson}}</mat-checkbox>
+      <br><br>
+      <mat-form-field>
+        <mat-label> רמת נגישות למוגבלים </mat-label>
+        <mat-select formControlName="accessibility">
+          <mat-option value="נגיש">נגיש</mat-option>
+          <mat-option value="נגיש חלקית">נגיש חלקית</mat-option>
+          <mat-option value="לא נגיש">לא נגיש</mat-option>
+        </mat-select>
+        <mat-error *ngIf="addAttractionForm.get('accessibility').hasError('required')">שדה חובה</mat-error>
+      </mat-form-field>
+      <br>
+      <label>שעות פעילות: </label><br>
+      <mat-form-field>
+        <input autocomplete="off" matInput formControlName="openningHour" atp-time-picker placeholder=" שעת פתיחה" />
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <input autocomplete="off" matInput formControlName="closingHour" atp-time-picker placeholder="שעת סגירה" />
+      </mat-form-field>
+      <br>
+    </div>
+    <hr><br>
+
+    <div id="thirdDetails">
+      <label>מאפיינים נוספים:</label><br>
+      <label>האם הכניסה לאתר בתשלום?</label> -->
+<!-- לא<mat-slide-toggle formControlName="isPayment"  (click)="isTrueOrFalse()"></mat-slide-toggle>כן -->
+<!-- <mat-radio-group formControlName="isPayment">
+        <mat-radio-button name="isPayment" value="true">כן</mat-radio-button>
+        <mat-radio-button name="isPayment" value="false">לא</mat-radio-button>
+      </mat-radio-group>
+      <br>
+      <label>האם האטרקציה כוללת כניסה למים?</label>
+      <mat-radio-group formControlName="isEntranceToWater">
+        <mat-radio-button name="isEntranceToWater" value="true">כן</mat-radio-button>
+        <mat-radio-button name="isEntranceToWater" value="false">לא</mat-radio-button>
+      </mat-radio-group>
+      <br>
+      <label>האם האטרקציה מתאימה לקבוצות?</label>
+      <mat-radio-group formControlName="isMatchGroups">
+        <mat-radio-button name="isMatchGroups" value="true">כן</mat-radio-button>
+        <mat-radio-button name="isMatchGroups" value="false">לא</mat-radio-button>
+      </mat-radio-group>
+      <br>
+      <label>האם האטרקציה מתאימה לילדים?</label>
+      <mat-radio-group formControlName="isMatchChildren">
+        <mat-radio-button name="isMatchChildren" value="true">כן</mat-radio-button>
+        <mat-radio-button name="isMatchChildren" value="false">לא</mat-radio-button>
+      </mat-radio-group>
+      <br>
+      <label>האם האטרקציה מתאימה למשפחות?</label>
+      <mat-radio-group formControlName="isMatchFamilies">
+        <mat-radio-button name="isMatchFamilies" value="true">כן</mat-radio-button>
+        <mat-radio-button name="isMatchFamilies" value="false">לא</mat-radio-button>
+      </mat-radio-group>
+      <br>
+    </div><br>
+    <hr><br>
+
+    <div id="categories">
+      <label>קטגוריות מתאימות: </label><br>
+      <br>
+      <mat-checkbox *ngFor="let category of categories" (click)="checkedCategories(category.categoryName)">
+        {{category.categoryName}}
+      </mat-checkbox>
+      <br>
+    </div>
+
+    <div id="addImages">
+      <mat-icon>add_photo_alternate</mat-icon>
+      <label>הוספת תמונות לאתר</label>
+      <br>
+      <input type="file" (change)="onFileUpload($event)">
+      <br>
+      <label>נוספו {{imagesUrlArr.length}} תמונות</label>
+      <img [attr.src]='newImg' /><br>
+    </div>
+
+    <textarea placeholder="הערות נוספות" formControlName="notes" class="sm-textarea form-control" rows="3"></textarea>
+    <br><br>
+    <button mat-raised-button type="submit" [disabled]=addAttractionForm.invalid>סיום ואישור</button>
+  </form>
+
+</div>-->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////  -->
+
+ <!-- <br>
+<h4>מלא טופס זה על מנת להוסיף אתר למערכת</h4>
+<hr>
+<p>השדות המסומנים ב * הינם שדות חובה</p>
+<mat-vertical-stepper [linear]="!isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup" (ngSubmit)="onSubmit1()">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>פרטים כלליים</ng-template>
+      <div id="firstDetails">
+        <mat-form-field>
+          <input matInput autocomplete="off"  placeholder=" * שם האתר " formControlName="attractionName">
+          <mat-error *ngIf="firstFormGroup.get('attractionName').hasError('required')">שדה חובה</mat-error>
+          <mat-error *ngIf="firstFormGroup.get('attractionName').hasError('minlength')">מינימום תווים</mat-error>
+          <mat-error *ngIf="firstFormGroup.get('attractionName').hasError('pattern')"></mat-error>
+          <mat-icon matSuffix>nature</mat-icon>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field>
+          <input matInput autocomplete="street-address"  placeholder="* כתובת / מיקום " formControlName="address" autocomplete="off">
+          <mat-error *ngIf="firstFormGroup.get('address').hasError('required')">שדה חובה</mat-error>
+          <mat-error *ngIf="firstFormGroup.get('address').hasError('minlength')">מינימום תווים</mat-error>
+          <mat-icon matSuffix>pin_drop</mat-icon>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field>
+          <input autocomplete="off" matInput placeholder="מספר טלפון " formControlName="phoneNumber">
+          <mat-error *ngIf="firstFormGroup.get('phoneNumber').hasError('required')">שדה חובה</mat-error>
+          <mat-error *ngIf="firstFormGroup.get('phoneNumber').hasError('minlength')">מינימום תווים</mat-error>
+          <mat-error *ngIf="firstFormGroup.get('phoneNumber').hasError('pattern')">רק מספרים</mat-error>
+          <mat-icon matSuffix>phone</mat-icon>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field>
+          <input matInput autocomplete="off" placeholder="כתובת אינטרנט של האתר" formControlName="http">
+          <mat-error *ngIf="firstFormGroup.get('http').hasError('required')">שדה חובה</mat-error>
+          <mat-error *ngIf="firstFormGroup.get('http').hasError('minlength')">מינימום תווים</mat-error>
+        </mat-form-field>
+        <br>
+        <label>* אזור בארץ: </label><br>
+        <mat-radio-button (click)="saveArea(area)" *ngFor="let area of areaAttraction">{{area}}</mat-radio-button>
+        <br>
+      </div>
+      <br>
+      <div>
+        <button mat-raised-button matStepperNext type="submit" name="submit"
+          [disabled]="firstFormGroup.invalid">הבא</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup" (ngSubmit)="onSubmit2()">
+      <ng-template matStepLabel>פרטים נוספים</ng-template>
+      <div id="secondDetails">
+        <label> עונה מומלצת: </label><br>
+        <mat-checkbox (click)="saveSeasson(seasson)" *ngFor="let seasson of seassonAttraction"
+          formControlName="seasson">
+          {{seasson}}</mat-checkbox>
+        <br><br>
+        <mat-form-field>
+          <mat-label> רמת נגישות למוגבלים </mat-label>
+          <mat-select formControlName="accessibility">
+            <mat-option value="נגיש">נגיש</mat-option>
+            <mat-option value="נגיש חלקית">נגיש חלקית</mat-option>
+            <mat-option value="לא נגיש">לא נגיש</mat-option>
+          </mat-select>
+          <mat-error *ngIf="secondFormGroup.get('accessibility').hasError('required')">שדה חובה</mat-error>
+        </mat-form-field>
+        <br>
+        <label>שעות פעילות: </label><br>
+        <mat-form-field>
+          <input autocomplete="off" matInput formControlName="openningHour" atp-time-picker placeholder=" שעת פתיחה" />
+          <mat-error *ngIf="secondFormGroup.get('openningHour').hasError('pattern')">רק מספרים</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <input autocomplete="off" matInput formControlName="closingHour" atp-time-picker placeholder="שעת סגירה" />
+          <mat-error *ngIf="secondFormGroup.get('closingHour').hasError('pattern')">רק מספרים</mat-error>
+        </mat-form-field>
+        <br>
+      </div>
+      <br>
+      <div>
+        <button mat-raised-button matStepperPrevious>חזור</button>
+        <button mat-raised-button matStepperNext type="submit" name="submit"
+          [disabled]="secondFormGroup.invalid">הבא</button>
+      </div>
+    </form>
+  </mat-step>
+ <mat-step [stepControl]="thirdFormGroup">
+    <form [formGroup]="thirdFormGroup" (ngSubmit)="onSubmit3()">
+      <ng-template matStepLabel> מאפיינים והערות נוספות</ng-template>
+      <div id="thirdDetails">
+        <label>מאפיינים נוספים:</label><br>
+        <label>האם הכניסה לאתר בתשלום?</label> -->
+        <!-- לא<mat-slide-toggle formControlName="isPayment"  (click)="isTrueOrFalse()"></mat-slide-toggle>כן -->
+    <!--     <mat-radio-group formControlName="isPayment">
+          <mat-radio-button name="isPayment" value="true">כן</mat-radio-button>
+          <mat-radio-button name="isPayment" value="false">לא</mat-radio-button>
+        </mat-radio-group>
+        <br>
+        <label>האם האטרקציה כוללת כניסה למים?</label>
+        <mat-radio-group formControlName="isEntranceToWater">
+          <mat-radio-button name="isEntranceToWater" value="true">כן</mat-radio-button>
+          <mat-radio-button name="isEntranceToWater" value="false">לא</mat-radio-button>
+        </mat-radio-group>
+        <br>
+        <label>האם האטרקציה מתאימה לקבוצות?</label>
+        <mat-radio-group formControlName="isMatchGroups">
+          <mat-radio-button name="isMatchGroups" value="true">כן</mat-radio-button>
+          <mat-radio-button name="isMatchGroups" value="false">לא</mat-radio-button>
+        </mat-radio-group>
+        <br>
+        <label>האם האטרקציה מתאימה לילדים?</label>
+        <mat-radio-group formControlName="isMatchChildren">
+          <mat-radio-button name="isMatchChildren" value="true">כן</mat-radio-button>
+          <mat-radio-button name="isMatchChildren" value="false">לא</mat-radio-button>
+        </mat-radio-group>
+        <br>
+        <label>האם האטרקציה מתאימה למשפחות?</label>
+        <mat-radio-group formControlName="isMatchFamilies">
+          <mat-radio-button name="isMatchFamilies" value="true">כן</mat-radio-button>
+          <mat-radio-button name="isMatchFamilies" value="false">לא</mat-radio-button>
+        </mat-radio-group>
+        <br>
+      </div>
+      <textarea placeholder="הערות נוספות" formControlName="notes" class="sm-textarea form-control" rows="3"></textarea>
+      <br>
+      <div>
+        <button mat-raised-button matStepperPrevious>חזור</button>
+        <button mat-raised-button matStepperNext type="submit" name="submit"
+          [disabled]="thirdFormGroup.invalid">הבא</button>
+      </div>
+    </form>
+  </mat-step>
+ 
+  <mat-step [stepControl]="fourFormGroup">
+    <form [formGroup]="fourFormGroup" (ngSubmit)="onSubmit4()">
+      <ng-template matStepLabel>העלאת תמונות ובחירת קטגוריות </ng-template>
+      <div id="addImages">
+        <mat-icon>add_photo_alternate</mat-icon>
+        <label>הוספת תמונות לאתר</label>
+        <br>
+        <input type="file" (change)="onFileUpload($event)">
+        <br>
+        <label>נוספו {{imagesUrlArr.length}} תמונות</label>
+        <img [attr.src]='newImg' /><br>
+      </div>
+      <div id="categories">
+        <label>קטגוריות מתאימות: </label><br>
+        <br>
+        <mat-checkbox *ngFor="let category of categories" (click)="checkedCategories(category.categoryName)">
+          {{category.categoryName}}
+        </mat-checkbox>
+        <br>
+      </div>
+
+      <br>
+      <div>
+        <button mat-raised-button matStepperPrevious>חזור</button>
+        <button mat-raised-button (click)="stepper.reset()">איפוס</button>
+        <button mat-raised-button [disabled]="fourFormGroup.invalid" type="submit" name="submit">סיום ואישור</button>
+      </div>
+    </form>
+  </mat-step>
+</mat-vertical-stepper> -->
+<div>
+    <h4>הוספת אתר ל - Plan Your Trip</h4>
+    <hr>
+    <form [formGroup]="addAttractionForm" (ngSubmit)="onSubmit()">
+      <div id="firstDetails">
+        <mat-form-field>
+          <input matInput placeholder=" * שם האתר " formControlName="attractionName">
+          <mat-error *ngIf="addAttractionForm.get('attractionName').hasError('required')">שדה חובה</mat-error>
+          <mat-error *ngIf="addAttractionForm.get('attractionName').hasError('minlength')">מינימום תווים</mat-error>
+          <mat-error *ngIf="addAttractionForm.get('attractionName').hasError('pattern')"></mat-error>
+          <mat-icon matSuffix>nature</mat-icon>
+        </mat-form-field>
+        <br>
+  
+        <mat-form-field>
+          <input matInput placeholder="* כתובת / מיקום " formControlName="address" autocomplete="off">
+          <mat-error *ngIf="addAttractionForm.get('address').hasError('required')">שדה חובה</mat-error>
+          <mat-error *ngIf="addAttractionForm.get('address').hasError('minlength')">מינימום תווים</mat-error>
+          <mat-icon matSuffix>pin_drop</mat-icon>
+        </mat-form-field>
+        <br>
+  
+        <mat-form-field>
+          <input autocomplete="off" matInput placeholder="מספר טלפון " formControlName="phoneNumber">
+          <mat-error *ngIf="addAttractionForm.get('phoneNumber').hasError('required')">שדה חובה</mat-error>
+          <mat-error *ngIf="addAttractionForm.get('phoneNumber').hasError('minlength')">מינימום תווים</mat-error>
+          <mat-error *ngIf="addAttractionForm.get('phoneNumber').hasError('pattern')">רק מספרים</mat-error>
+          <mat-icon matSuffix>phone</mat-icon>
+        </mat-form-field>
+        <br>
+  
+        <mat-form-field>
+          <input matInput placeholder="כתובת אינטרנט של האתר" formControlName="http">
+          <mat-error *ngIf="addAttractionForm.get('http').hasError('required')">שדה חובה</mat-error>
+          <mat-error *ngIf="addAttractionForm.get('http').hasError('minlength')">מינימום תווים</mat-error>
+        </mat-form-field>
+        <br>
+        <label>* אזור בארץ:  </label><br>
+        <mat-radio-button (click)="saveArea(area)" *ngFor="let area of areaAttraction">{{area}}</mat-radio-button>
+        <br>
+      </div>
+      <br>
+      <hr><br>
+  
+      <div id="secondDetails">
+        <label> עונה מומלצת: </label><br>
+        <mat-checkbox (click)="saveSeasson(seasson)" *ngFor="let seasson of seassonAttraction" formControlName="seasson">
+          {{seasson}}</mat-checkbox>
+        <br><br>
+        <mat-form-field>
+          <mat-label> רמת נגישות למוגבלים </mat-label>
+          <mat-select formControlName="accessibility">
+            <mat-option value="נגיש">נגיש</mat-option>
+            <mat-option value="נגיש חלקית">נגיש חלקית</mat-option>
+            <mat-option value="לא נגיש">לא נגיש</mat-option>
+          </mat-select>
+          <mat-error *ngIf="addAttractionForm.get('accessibility').hasError('required')">שדה חובה</mat-error>
+        </mat-form-field>
+        <br>
+  
+        <label>שעות פעילות: </label><br>
+        <mat-form-field>
+          <input autocomplete="off" matInput formControlName="openningHour" atp-time-picker placeholder=" שעת פתיחה" />
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <input autocomplete="off" matInput formControlName="closingHour" atp-time-picker placeholder="שעת סגירה" />
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <input autocomplete="off" matInput formControlName="estimatedTime"  placeholder="זמן שהייה משוער" />
+          <mat-error *ngIf="addAttractionForm.get('estimatedTime').hasError('pattern')">הכנס טווח שעות תקין</mat-error>
+        </mat-form-field>
+      </div><br>
+      <hr><br>
+  
+      <div id="thirdDetails">
+        <label>מאפיינים נוספים:</label><br>
+        <label>האם הכניסה לאתר בתשלום?</label>
+        <!-- לא<mat-slide-toggle formControlName="isPayment"  (click)="isTrueOrFalse()"></mat-slide-toggle>כן -->
+        <mat-radio-group formControlName="isPayment">
+          <mat-radio-button name="isPayment" value="true">כן</mat-radio-button>
+          <mat-radio-button name="isPayment" value="false">לא</mat-radio-button>
+        </mat-radio-group>
+        <br>
+        <label>האם האטרקציה כוללת כניסה למים?</label>
+        <mat-radio-group formControlName="isEntranceToWater">
+          <mat-radio-button name="isEntranceToWater" value="true">כן</mat-radio-button>
+          <mat-radio-button name="isEntranceToWater" value="false">לא</mat-radio-button>
+        </mat-radio-group>
+        <br>
+        <label>האם האטרקציה מתאימה לקבוצות?</label>
+        <mat-radio-group formControlName="isMatchGroups">
+          <mat-radio-button name="isMatchGroups" value="true">כן</mat-radio-button>
+          <mat-radio-button name="isMatchGroups" value="false">לא</mat-radio-button>
+        </mat-radio-group>
+        <br>
+        <label>האם האטרקציה מתאימה לילדים?</label>
+        <mat-radio-group formControlName="isMatchChildren">
+          <mat-radio-button name="isMatchChildren" value="true">כן</mat-radio-button>
+          <mat-radio-button name="isMatchChildren" value="false">לא</mat-radio-button>
+        </mat-radio-group>
+        <br>
+        <label>האם האטרקציה מתאימה למשפחות?</label>
+        <mat-radio-group formControlName="isMatchFamilies">
+          <mat-radio-button name="isMatchFamilies" value="true">כן</mat-radio-button>
+          <mat-radio-button name="isMatchFamilies" value="false">לא</mat-radio-button>
+        </mat-radio-group>
+        <br>
+      </div><br>
+      <hr><br>
+  
+      <div id="categories">
+        <label>קטגוריות מתאימות: </label><br>
+        <br>
+        <mat-checkbox *ngFor="let category of categories" (click)="checkedCategories(category.categoryName)">
+          {{category.categoryName}}
+        </mat-checkbox>
+        <br>
+      </div><br>
+      <hr><br>
+  
+      <div id="addImages"> 
+        <mat-icon>add_photo_alternate</mat-icon>
+        <label>הוספת תמונות לאתר</label>
+        <br>
+        <input type="file" (change)="onFileUpload($event)">
+        <br>
+        <label>נוספו {{imagesUrlArr.length}} תמונות</label>
+        <img [attr.src]='newImg' /><br>
+      </div><br>
+      <hr><br><br>
+  
+      <textarea placeholder="הערות נוספות" formControlName="notes" class="sm-textarea form-control" rows="3"></textarea>
+      <br><br>
+      <input type="submit" value="סיום ואישור"  [disabled]=addAttractionForm.invalid>
+      
+    </form>
+  
+  </div>
+  
+  

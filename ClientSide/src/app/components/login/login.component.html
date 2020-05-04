@@ -1,0 +1,98 @@
+<!-- <input id="tab-1" type="button" name="tab" class="sign-in" checked><label for="tab-1" class="tab">התחברות</label>
+<input id="tab-2" type="button" name="tab" class="for-pwd"><label for="tab-2" class="tab">משתמש חדש?</label> -->
+<div id="signInDiv" class="card">
+        <h5 class="card-header info-color white-text text-center py-4" style="background-color: lightgray;">
+            <strong>התחברות</strong>
+        </h5>
+        <div class="card-body px-lg-5 pt-0">
+            <form [formGroup]="login" (ngSubmit)="onSubmit()">
+                <br>
+                <br>
+                <div class="group">
+                    <mat-form-field>
+                        <input matInput autocomplete="email" placeholder=" כתובת מייל" formControlName="email" required>
+                        <mat-error *ngIf="login.get('email').hasError('required')">הכנס כתובת מייל</mat-error>
+                        <mat-error *ngIf="email.hasError('email')">יש להזין כתובת מייל חוקית</mat-error>
+                        <mat-icon matSuffix>email</mat-icon>
+                    </mat-form-field>
+                </div>
+                <br>
+                <div class="group">
+                    <mat-form-field class="group">
+                        <input matInput  placeholder=" סיסמה" formControlName="passwordUser" required
+                            [type]="hide ? 'password' : 'text'">
+                        <mat-error *ngIf="login.get('passwordUser').hasError('required')">שדה חובה</mat-error>
+                        <mat-error *ngIf="login.controls['passwordUser'].hasError('minlength')">מינימום 3 תווים
+                        </mat-error>
+                        <mat-error *ngIf="login.controls['passwordUser'].hasError('maxlength')">מקסימום 10 תווים
+                        </mat-error>
+                        <mat-icon  matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </mat-form-field>
+                </div>
+                <br>
+    
+                <a (click)="forgetPassword()">שכחת סיסמה?</a><br><br>
+                <div class="group">
+                    <input class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit"
+                        id="submit" value="אישור" [disabled]="login.invalid">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div id="or"><label>או</label></div>
+    
+    <div id="signUpDiv" class="card">
+        <h5 class="card-header info-color white-text text-center py-4" style="background-color: lightgray;">
+            <strong>הרשמה</strong>
+        </h5>
+        <div class="card-body px-lg-5 pt-0">
+            <form class="text-center" style="color: #757575;" action="#!" [formGroup]="signUpUser" (ngSubmit)="onSubmit()">
+                <div class="group">
+                    <mat-form-field>
+                        <input matInput autocomplete="off"  placeholder=" שם משתמש" formControlName="userName">
+                        <mat-error *ngIf="signUpUser.get('userName').hasError('required')">שדה חובה</mat-error>
+                        <mat-error *ngIf="signUpUser.get('userName').hasError('minlength')">מינימום תווים
+                        </mat-error>
+                        <mat-error *ngIf="signUpUser.get('userName').hasError('pattern')">רק אותיות</mat-error>
+                        <mat-icon matSuffix>person</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="group">
+                    <mat-form-field>
+                        <input matInput autocomplete="off" placeholder=" כתובת " formControlName="address">
+                        <mat-error *ngIf="signUpUser.get('address').hasError('required')">שדה חובה</mat-error>
+                        <mat-error *ngIf="signUpUser.get('address').hasError('minlength')">מינימום תווים</mat-error>
+                        <mat-icon matSuffix>home</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="group">
+                    <mat-form-field>
+                        <input matInput autocomplete="email" placeholder=" כתובת מייל" formControlName="eMail">
+                        <mat-error *ngIf="signUpUser.get('eMail').hasError('required')">שדה חובה</mat-error>
+                        <mat-error *ngIf="signUpUser.get('eMail').hasError('email')">כתובת מייל לא חוקית</mat-error>
+                        <mat-icon matSuffix>email</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="group">
+                    <mat-form-field>
+                        <input matInput autocomplete="off" placeholder=" סיסמה" formControlName="password" [type]="hide ? 'password' : 'text'">
+                        <mat-error *ngIf="signUpUser.get('password').hasError('required')">שדה חובה</mat-error>
+                        <mat-error *ngIf="signUpUser.controls['password'].hasError('minlength')">מינימום 6 תווים
+                        </mat-error>
+                        <mat-error *ngIf="signUpUser.controls['password'].hasError('maxlength')">מקסימום 8 תווים
+                        </mat-error>
+                        <mat-icon  matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div id="ok">
+                    <label> בלחיצה על הרשמה הנך מסכים </label>
+                    <a id="sitePolicy" routerLink="/planYourTrip/sitePolicy" routerLinkActive="active">לתנאי האתר</a>
+                </div>
+                <input class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit"
+                    (click)="signUser()" value="הרשמה" [disabled]="signUpUser.invalid">
+            </form>
+        </div>
+    </div>
+
+  

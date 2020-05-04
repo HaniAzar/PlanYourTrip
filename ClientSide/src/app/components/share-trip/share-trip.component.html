@@ -1,0 +1,16 @@
+<div id="underDiv"></div>
+<div id="shareTrip">
+  <h5>הכנס כתובת מייל בה תרצה לשתף </h5>
+  <hr>
+  <form [formGroup]="share" (ngSubmit)="send()">
+    <mat-form-field>
+      <input matInput placeholder=" כתובת מייל" formControlName="email" required>
+      <!-- <mat-error *ngIf="email.hasError('email')">יש להזין כתובת מייל חוקית</mat-error> -->
+      <mat-error *ngIf="share.get('email').hasError('email')">יש להזין כתובת מייל חוקית</mat-error>
+      <mat-icon matSuffix>email</mat-icon>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button  type="submit" name="submit" id="ok"  [disabled]="share.invalid">שתף</button>
+    <button mat-raised-button mat-dialog-close id="cencel">ביטול</button>
+  </form>
+</div>

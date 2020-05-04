@@ -1,0 +1,67 @@
+agm-map {
+  height: 60vh;
+  width: 100%;
+}
+mat-drawer-container {
+  width: 75vw;
+  margin-top: -10vh;
+}
+mat-spinner {
+  position: relative;
+  z-index: 2;
+  top: 37vh;
+  right:35vw;
+}
+mat-icon {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 2vw;
+}
+mat-form-field {
+  position: relative;
+  top: 1.5vh;
+  right: 55.5vw;
+  margin-top: 1v;
+  z-index: 2;
+  background-color: white;
+  padding-right: 1vw;
+  padding-left: 1vw;
+}
+mat-card.mat-card {
+  padding-right: 3vw !important;
+}
+
+#details {
+  text-align: right;
+  width: 17vw;
+  height: 100%;
+  border: solid;
+  border-width: 1px;
+  font-size: 2.5vh;
+  padding: 1vh;
+}
+
+#closeSideBar {
+  font-size: 5vh;
+  margin-right: 1vw;
+  cursor: pointer;
+}
+button {
+  margin-top: 5vh;
+  background-color: #404040;
+  color: white;
+  margin-right: 2.5vw;
+  font-size: 2.7vh;
+  width: 11vw;
+  height: 7vh;
+  text-align: center;
+  mat-icon {
+    color: #0fbd25;
+    margin-left: 0vw;
+    cursor: pointer;
+  }
+}
+h6{
+  color:#0fbd25;
+}
+

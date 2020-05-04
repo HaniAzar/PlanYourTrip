@@ -1,0 +1,9 @@
+<!-- <a routerLink="/planYourTrip/waitingGuides">מדריכים הממתינים לאישורך  </a><br>
+<a routerLink="/planYourTrip/waitingAttractions">אתרי תיירות הממתינים לאישורך</a> -->
+<h4>ברוך הבא מנהל!</h4><hr><br>
+<h5 *ngIf="countOfGuides>1">{{countOfGuides}} מדריכים ממתינים לאישורך </h5>
+<h5 *ngIf="countOfGuides==1">מדריך אחד ממתין לאישורך</h5><br>
+<h5 *ngIf="countOfAttractions>1">{{countOfAttractions}} אתרים ממתינים לאישורך </h5>
+<h5 *ngIf="countOfAttractions==1">אתר אחד ממתין לאישורך </h5>
+
+

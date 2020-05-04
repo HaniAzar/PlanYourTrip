@@ -1,0 +1,28 @@
+W:\כתות ו\התמחויות\הנדסאות\חני אזר\PlanYourTrip\BLL\bin\Debug\BLL.dll
+W:\כתות ו\התמחויות\הנדסאות\חני אזר\PlanYourTrip\BLL\bin\Debug\BLL.pdb
+W:\כתות ו\התמחויות\הנדסאות\חני אזר\PlanYourTrip\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+W:\כתות ו\התמחויות\הנדסאות\חני אזר\PlanYourTrip\BLL\obj\Debug\BLL.dll
+W:\כתות ו\התמחויות\הנדסאות\חני אזר\PlanYourTrip\BLL\obj\Debug\BLL.pdb
+E:\פרויקט גמר\PlanYourTrip\ServerSide\BLL\bin\Debug\BLL.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\BLL\bin\Debug\BLL.pdb
+E:\פרויקט גמר\PlanYourTrip\ServerSide\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+E:\פרויקט גמר\PlanYourTrip\ServerSide\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+E:\פרויקט גמר\PlanYourTrip\ServerSide\BLL\obj\Debug\BLL.dll
+E:\פרויקט גמר\PlanYourTrip\ServerSide\BLL\obj\Debug\BLL.pdb
+C:\Users\User\Desktop\ServerSide\BLL\bin\Debug\BLL.dll
+C:\Users\User\Desktop\ServerSide\BLL\bin\Debug\BLL.pdb
+C:\Users\User\Desktop\ServerSide\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\User\Desktop\ServerSide\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\ServerSide\BLL\obj\Debug\BLL.dll
+C:\Users\User\Desktop\ServerSide\BLL\obj\Debug\BLL.pdb
+G:\ServerSide\BLL\bin\Debug\BLL.dll
+G:\ServerSide\BLL\bin\Debug\BLL.pdb
+G:\ServerSide\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+G:\ServerSide\BLL\obj\Debug\BLL.dll
+G:\ServerSide\BLL\obj\Debug\BLL.pdb
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\BLL\bin\Debug\BLL.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\BLL\bin\Debug\BLL.pdb
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\BLL\obj\Debug\BLL.dll
+C:\Users\User\Desktop\PlanYourTrip\ServerSide\BLL\obj\Debug\BLL.pdb

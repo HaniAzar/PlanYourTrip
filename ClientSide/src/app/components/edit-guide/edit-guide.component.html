@@ -1,0 +1,52 @@
+<div id="detailes">
+  <button mat-raised-button (click)="deleteGuide()">ביטול הרשמתך כמדריך</button>
+  <h4>ערוך פרטים</h4>
+  <form [formGroup]="editDetailsForm" (ngSubmit)="onSubmit(editDetailsForm.value)">
+    <mat-form-field>
+      <input matInput placeholder="שם מדריך" [value]="currentGuide.guideName" formControlName="guideName">
+      <mat-error *ngIf="editDetailsForm.get('guideName').hasError('minlength')">מינימום</mat-error>
+      <mat-error *ngIf="editDetailsForm.get('guideName').hasError('pattern')">הכנס ערך חוקי</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="כתובת דואר אלקטרוני" [value]="currentGuide.eMail" formControlName="email">
+      <mat-error *ngIf="email.hasError('email')">יש להזין כתובת מייל חוקית</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="סיסמה" [value]="currentGuide.password" formControlName="password" [type]="hide ? 'password' : 'text'">
+      <mat-error *ngIf="editDetailsForm.controls['password'].hasError('minlength')">מינימום 6 תווים</mat-error>
+      <mat-error *ngIf="editDetailsForm.controls['password'].hasError('maxlength')">מקסימום 8 תווים</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input type="text" placeholder="יצירת קשר" matInput formControlName="guidePhone" [value]="currentGuide.phoneNumber">
+      <mat-error *ngIf="editDetailsForm.get('guidePhone').hasError('pattern')">הכנס רק מספרים</mat-error>
+      <mat-error
+        *ngIf="editDetailsForm.get('guidePhone').hasError('minlength')&&!editDetailsForm.get('guidePhone').hasError('pattern')">
+        מינימום</mat-error>
+    </mat-form-field>
+    <br>
+    <div id="addImages">
+      <label>שינוי תמונת פרופיל</label>
+      <input type="file" (change)="onFileUpload($event)">
+      <img [attr.src]='newImg' /><br>
+    </div>
+    <label>ימי העבודה שלך בשבוע:</label>
+    <span>{{currentGuide.workingDays}}</span><br>
+    <mat-checkbox *ngFor="let day of days" formControlName="days" (click)="saveDays(day)">{{day}}</mat-checkbox><br>
+    <label>שפות ההדרכה: </label>
+    <span>{{currentGuide.languages}}</span><br>
+    <mat-checkbox *ngFor="let language of languagesArr" formControlName="languages" (click)="savelanguages(language)">
+      {{language}}</mat-checkbox>
+    <br>
+    <mat-form-field>
+      <textarea placeholder="ספר על עצמך" matInput maxlength="100" [value]="currentGuide.details" formControlName="details"></textarea>
+    </mat-form-field>
+    <br>
+    <div id="save">
+      <button mat-raised-button type="submit" name="submit">שמור שינויים</button>
+      <button mat-raised-button (click)="cencel()">ביטול</button>
+    </div>
+  </form>
+</div>

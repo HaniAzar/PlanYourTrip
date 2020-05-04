@@ -1,0 +1,49 @@
+<p *ngIf="tripsForJoining.Length>0">טיולים מאורגנים שלי</p>
+<h4 *ngIf="!tripsForJoining"> - - - אין לך עדיין טיולים מאורגנים - - -</h4>
+
+
+<div id="card" *ngFor="let tripGuide of tripsForJoining">
+  <div id="content" class="inline">
+
+
+
+    <div>
+      <b *ngFor="let attractionsName of attractionsToTrip[tripGuide.id]">{{attractionsName}} | </b>
+      <br><br>
+      <div *ngIf="tripGuide.notes" id="notesDiv">
+        <p id="notes" ngbPopover={{tripGuide.notes}} triggers="mouseenter:mouseleave">
+          הערות ועדכונים
+        </p>
+        <mat-icon id="more">arrow_drop_down</mat-icon>
+      </div>
+      <p>מספר משתתפים שנרשמו :{{tripGuide.numOfSavedTourists}}</p>
+      <p class="text">שעת יציאה:{{tripGuide.leavingTime }}</p>
+      <p>מספר משתתפים :{{tripGuide.maxOfTourists }}</p>
+      <p *ngIf="tripGuide.price">מחיר ליחיד :{{tripGuide.price}}</p>
+
+      <p *ngIf="!tripGuide.price">הצטרפות חינם</p>
+    </div>
+  </div>
+
+  <div id="wrapper">
+    <button (click)="upDate(tripGuide)" title="עדכן" mat-raised-button>עדכון</button>
+    <div id="date" class="inline">
+      <h5>{{tripGuide.tripDate|date:'d'}}</h5>
+      <h6>{{tripGuide.tripDate|date:'MMMM'}}</h6>
+    </div>
+  </div>
+
+  <div id="images">
+    <ngb-carousel interval="7000">
+      <span *ngFor="let attraction of imagesToTrip[tripGuide.id]">
+        <ng-template ngbSlide *ngFor="let img of attraction">
+          <div id="imgDiv" class="picsum-img-wrapper">
+            <img [src]="img">
+          </div>
+        </ng-template>
+      </span>
+    </ngb-carousel>
+  </div>
+
+
+</div>

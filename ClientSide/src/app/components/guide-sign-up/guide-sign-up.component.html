@@ -1,0 +1,101 @@
+<mat-horizontal-stepper linear>
+    <br><br>
+    <mat-step [stepControl]="signUp">
+        <ng-template matStepLabel>הכנסת פרטים אישיים</ng-template>
+        <form [formGroup]="signUp" (ngSubmit)="onSubmit(signUp.value)">
+            <div id="detailes1">
+                <label>שם מדריך: *</label>
+                <mat-form-field>
+                    <input autocomplete="off" matInput formControlName="guideName" required>
+                    <mat-error *ngIf="signUp.get('guideName').hasError('required')">שדה חובה</mat-error>
+                    <mat-error *ngIf="signUp.get('guideName').hasError('minlength')">מינימום</mat-error>
+                    <mat-error *ngIf="signUp.get('guideName').hasError('pattern')">הכנס ערך חוקי</mat-error>
+                    <!-- <mat-icon matSuffix>person</mat-icon> -->
+                </mat-form-field>
+                <br>
+                <label>כתובת מייל: *</label>
+                <mat-form-field>
+                    <input autocomplete="email" matInput formControlName="email" required>
+                    <mat-error *ngIf="signUp.get('email').hasError('required')">הכנס כתובת מייל</mat-error>
+                    <mat-error *ngIf="email.hasError('email')">יש להזין כתובת מייל חוקית</mat-error>
+                    <!-- <mat-icon matSuffix>email</mat-icon> -->
+                </mat-form-field>
+                <br>
+                <label>הכנס סיסמה: *</label>
+                <mat-form-field>
+                    <input matInput autocomplete="off" formControlName="password" required
+                        [type]="hide ? 'password' : 'text'">
+                    <mat-error *ngIf="signUp.get('password').hasError('required')">שדה חובה</mat-error>
+                    <mat-error *ngIf="signUp.controls['password'].hasError('minlength')">מינימום 6 תווים</mat-error>
+                    <mat-error *ngIf="signUp.controls['password'].hasError('maxlength')">מקסימום 8 תווים</mat-error>
+                    <!-- <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon> -->
+                </mat-form-field>
+                <br>
+                <label>מספר טלפון: *</label>
+                <mat-form-field>
+                    <input type="text" autocomplete="off" matInput formControlName="guidePhone" required>
+                    <mat-error *ngIf="signUp.get('guidePhone').hasError('required')">שדה חובה</mat-error>
+                    <mat-error *ngIf="signUp.get('guidePhone').hasError('pattern')">הכנס רק מספרים</mat-error>
+                    <mat-error
+                        *ngIf="signUp.get('guidePhone').hasError('minlength')&&!signUp.get('guidePhone').hasError('pattern')">
+                        מינימום</mat-error>
+                    <!-- <mat-icon matSuffix>phone</mat-icon> -->
+                </mat-form-field>
+                <br>
+                <label>ספר על עצמך: </label>
+                <textarea matInput maxlength="100" class="sm-textarea form-control" rows="3"
+                    formControlName="guideDetailes"></textarea>
+            </div>
+            <div id="detailes2">
+                <br>
+                <div id="imgDiv">
+                    <label> :הוספת תמונת פרופיל</label>
+                    <mat-icon>add_photo_alternate</mat-icon>
+                    <mat-icon>guides</mat-icon>
+                    <br>
+                    <input type="file" (change)="onFileUpload($event)">
+                    <br>
+                    <img [attr.src]='newImg' /><br>
+                </div>
+                <label>ימי העבודה שלך בשבוע: *</label>
+                <br>
+                <mat-checkbox *ngFor="let day of days" formControlName="days" (click)="saveDays(day)">{{day}}
+                </mat-checkbox>
+                <br>
+                <mat-error *ngIf="!checkedDays && isCheckedDays">חובה לבחור ימי עבודה</mat-error>
+                <br>
+                <label>שפות ההדרכה: *</label>
+                <br>
+                <mat-checkbox *ngFor="let language of languagesArr" formControlName="languages"
+                    (click)="savelanguages(language)">{{language}}</mat-checkbox>
+                <br>
+                <mat-error *ngIf="!checkedLanguages && isCheckedLanguages">חובה לבחור שפות הדרכה!</mat-error>
+                <p>השדות המסומנים ב * הם שדות חובה!</p><br>
+                <button type="submit" name="submit" mat-button matStepperNext
+                    [disabled]="signUp.invalid || !checkedDays || !checkedLanguages && !isCheckedLanguages">הבא</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step>
+        <div id="step2">
+            <ng-template matStepLabel>אישור תנאי השימוש באתר</ng-template>
+            <label>האם אתה מאשר את </label>
+            <p id="sitePolicy" (click)="OpensitePolicy()">תנאי השימוש באתר?</p>
+            <br>
+            <mat-checkbox (click)="agree=!agree">אני מאשר</mat-checkbox>
+            <mat-error *ngIf="!agree">עליך לאשר את תנאי האתר כדי להמשיך</mat-error>
+            <mat-error *ngIf="notGood"> עליך לשנות סיסמה כדי להמשיך</mat-error>
+            <mat-error *ngIf="signedUp">מדריך רשום</mat-error>
+            <div>
+                <button mat-button matStepperPrevious>חזור</button>
+                <button mat-button matStepperNext [disabled]="!agree || notGood  || signedUp "
+                    (click)="sendToManager()">הבא</button>
+            </div>
+        </div>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>סיום</ng-template>
+        <p>!אנו מודים לך על בקשתך להצטרף למאגר מדריכי הטיולים שלנו</p><br>
+        <p> לאחר אישור מנהל האתר תשלח לך במייל סיסמת כניסה אישית לאתר</p>
+    </mat-step>
+</mat-horizontal-stepper>

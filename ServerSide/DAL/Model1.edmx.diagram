@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9ee83f7595b245469c0f718efe821427" Name="Diagram1">
+        <EntityTypeShape EntityType="Trips_DBModel.AttractionsToCategories" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Trips_DBModel.AttractionsToGuidesTrips" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Trips_DBModel.AttractionsToUsersTrips" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="Trips_DBModel.Categories" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Trips_DBModel.GuideActivityDiary" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Trips_DBModel.GuidesForJoiningToSite" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Trips_DBModel.ImagesUrl" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Trips_DBModel.TourGuides" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Trips_DBModel.TouristAttractions" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Trips_DBModel.TripsForJoining" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Trips_DBModel.Users" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Trips_DBModel.UsersTrips" Width="1.5" PointX="3" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Trips_DBModel.WaitingAttractions" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Trips_DBModel.WaitingAttractionsImages" Width="1.5" PointX="9.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Trips_DBModel.writtenDownUsers" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="Trips_DBModel.FK_AttractionsToGuidesTrips_TouristAttractions" ManuallyRouted="false" />
+        <AssociationConnector Association="Trips_DBModel.FK_AttractionsToGuidesTrips_TripsForJoining" ManuallyRouted="false" />
+        <AssociationConnector Association="Trips_DBModel.FK_AttractionsToTrips_TouristAttractions" ManuallyRouted="false" />
+        <AssociationConnector Association="Trips_DBModel.FK_AttractionsToUsersTrips_UsersTrips" ManuallyRouted="false" />
+        <AssociationConnector Association="Trips_DBModel.FK_GuideActivityDiary_TourGuides" ManuallyRouted="false" />
+        <AssociationConnector Association="Trips_DBModel.FK_TripsForJoining_TourGuides" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

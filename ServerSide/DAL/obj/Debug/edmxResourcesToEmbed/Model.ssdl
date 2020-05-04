@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Trips_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="GuideActivityDiary">
+    <Key>
+      <PropertyRef Name="guideId" />
+      <PropertyRef Name="activityDate" />
+    </Key>
+    <Property Name="guideId" Type="int" Nullable="false" />
+    <Property Name="activityDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SavedTrips">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="tripId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TourGuides">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="guideName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="eMail" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="phoneNumber" Type="nvarchar" MaxLength="15" />
+    <Property Name="workingDays" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TouristAttractions">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="attractionName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="category" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="address" Type="nvarchar" MaxLength="50" />
+    <Property Name="area" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="phoneNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="match" Type="nvarchar" MaxLength="50" />
+    <Property Name="payment" Type="bit" />
+    <Property Name="seasson" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="openningHour" Type="nvarchar" MaxLength="20" />
+    <Property Name="closingHour" Type="nvarchar" MaxLength="20" />
+    <Property Name="accessibility" Type="nvarchar" MaxLength="50" />
+    <Property Name="imagesUrl" Type="nvarchar" MaxLength="100" />
+    <Property Name="hardnessLevel" Type="nvarchar" MaxLength="50" />
+    <Property Name="link" Type="nvarchar" MaxLength="100" />
+    <Property Name="notes" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Trips">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="touristAttractionId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TripsForJoining">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tripId" Type="int" Nullable="false" />
+    <Property Name="guideId" Type="int" Nullable="false" />
+    <Property Name="maxOfTourists" Type="int" Nullable="false" />
+    <Property Name="numOfSavedTourists" Type="int" Nullable="false" />
+    <Property Name="tripDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="eMail" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="phoneNumber" Type="nvarchar" MaxLength="15" />
+    <Property Name="password" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="writtenDownUsers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tripForJoiningId" Type="int" Nullable="false" />
+    <Property Name="userId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_GuideActivityDiary_TourGuides">
+    <End Role="TourGuides" Type="Self.TourGuides" Multiplicity="1" />
+    <End Role="GuideActivityDiary" Type="Self.GuideActivityDiary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TourGuides">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="GuideActivityDiary">
+        <PropertyRef Name="guideId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SavedTrips_Trips">
+    <End Role="Trips" Type="Self.Trips" Multiplicity="1" />
+    <End Role="SavedTrips" Type="Self.SavedTrips" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trips">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="SavedTrips">
+        <PropertyRef Name="tripId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SavedTrips_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="SavedTrips" Type="Self.SavedTrips" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="SavedTrips">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Trips_TouristAttractions">
+    <End Role="TouristAttractions" Type="Self.TouristAttractions" Multiplicity="1" />
+    <End Role="Trips" Type="Self.Trips" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TouristAttractions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Trips">
+        <PropertyRef Name="touristAttractionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TripsForJoining_TourGuides">
+    <End Role="TourGuides" Type="Self.TourGuides" Multiplicity="1" />
+    <End Role="TripsForJoining" Type="Self.TripsForJoining" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TourGuides">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TripsForJoining">
+        <PropertyRef Name="guideId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TripsForJoining_Trips">
+    <End Role="Trips" Type="Self.Trips" Multiplicity="1" />
+    <End Role="TripsForJoining" Type="Self.TripsForJoining" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trips">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TripsForJoining">
+        <PropertyRef Name="tripId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_writtenDownUsers_Trips">
+    <End Role="Trips" Type="Self.Trips" Multiplicity="1" />
+    <End Role="writtenDownUsers" Type="Self.writtenDownUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trips">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="writtenDownUsers">
+        <PropertyRef Name="tripForJoiningId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_writtenDownUsers_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="writtenDownUsers" Type="Self.writtenDownUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="writtenDownUsers">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Trips_DBModelStoreContainer">
+    <EntitySet Name="GuideActivityDiary" EntityType="Self.GuideActivityDiary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SavedTrips" EntityType="Self.SavedTrips" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TourGuides" EntityType="Self.TourGuides" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TouristAttractions" EntityType="Self.TouristAttractions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Trips" EntityType="Self.Trips" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TripsForJoining" EntityType="Self.TripsForJoining" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="writtenDownUsers" EntityType="Self.writtenDownUsers" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_GuideActivityDiary_TourGuides" Association="Self.FK_GuideActivityDiary_TourGuides">
+      <End Role="TourGuides" EntitySet="TourGuides" />
+      <End Role="GuideActivityDiary" EntitySet="GuideActivityDiary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SavedTrips_Trips" Association="Self.FK_SavedTrips_Trips">
+      <End Role="Trips" EntitySet="Trips" />
+      <End Role="SavedTrips" EntitySet="SavedTrips" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SavedTrips_Users" Association="Self.FK_SavedTrips_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="SavedTrips" EntitySet="SavedTrips" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Trips_TouristAttractions" Association="Self.FK_Trips_TouristAttractions">
+      <End Role="TouristAttractions" EntitySet="TouristAttractions" />
+      <End Role="Trips" EntitySet="Trips" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TripsForJoining_TourGuides" Association="Self.FK_TripsForJoining_TourGuides">
+      <End Role="TourGuides" EntitySet="TourGuides" />
+      <End Role="TripsForJoining" EntitySet="TripsForJoining" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TripsForJoining_Trips" Association="Self.FK_TripsForJoining_Trips">
+      <End Role="Trips" EntitySet="Trips" />
+      <End Role="TripsForJoining" EntitySet="TripsForJoining" />
+    </AssociationSet>
+    <AssociationSet Name="FK_writtenDownUsers_Trips" Association="Self.FK_writtenDownUsers_Trips">
+      <End Role="Trips" EntitySet="Trips" />
+      <End Role="writtenDownUsers" EntitySet="writtenDownUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_writtenDownUsers_Users" Association="Self.FK_writtenDownUsers_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="writtenDownUsers" EntitySet="writtenDownUsers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

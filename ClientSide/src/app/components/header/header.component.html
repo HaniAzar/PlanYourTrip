@@ -1,0 +1,51 @@
+<div id="divLogo" class="bounceInDown">
+        <h1>Plan Your Trip</h1>
+    </div>
+    <div id="currentUser">
+        <h5 *ngIf="!IsExist">שלום אורח</h5>
+        <button id="logIn" mat-raised-button *ngIf="!IsExist">
+            <a routerLink="/planYourTrip/login">התחבר</a>
+        </button>
+        <h5 *ngIf="nameGuide">מדריך: {{nameGuide.guideName}}</h5>
+        <h5 *ngIf="nameUser"> מטייל: {{nameUser.userName}}</h5>
+        <h5 *ngIf="nameManager"> מנהל</h5>
+        <button id="logOut" mat-raised-button *ngIf="IsExist" (click)="breakAway()">התנתק</button>
+    </div>
+    <nav class="navbar">
+        <button title="תפריט" mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon id="menuIcon">menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <span mat-menu-item (click)="showMyTrip()">הטיול שלי
+                <mat-icon class="icons">map</mat-icon>
+            </span>
+            <span mat-menu-item (click)="planNewTrip()">התחל תכנון מחדש
+                <mat-icon class="icons">refresh</mat-icon>
+            </span>
+            <!-- <span mat-menu-item *ngIf="!nameGuide" (click)="addGuideToTrip()">
+                הוסף/שנה מדריך לטיול
+                <mat-icon class="icons">person</mat-icon>
+            </span> -->
+        </mat-menu>
+        <a class="navbar-brand" routerLink="/planYourTrip/about" routerLinkActive="active">אודות </a>
+        <a class="navbar-brand" routerLink="/planYourTrip/tripsForJoining" routerLinkActive="active">טיולים
+            מאורגנים</a>
+        <a class="navbar-brand" routerLink="/planYourTrip/tripPlanning" routerLinkActive="active">
+            תכנון
+            טיול
+        </a>
+        <a class="navbar-brand" *ngIf="!IsExist" routerLink="/planYourTrip/guideSignUp" routerLinkActive="active">הרשמה
+            כמדריך</a>
+        <a class="navbar-brand" routerLink="/planYourTrip/addAttraction" routerLinkActive="active">הוספת אתר</a>
+        <a class="navbar-brand" *ngIf="nameManager" routerLink="/planYourTrip/waitingGuides"
+            routerLinkActive="active">מדריכים לאישור</a>
+        <a class="navbar-brand" *ngIf="nameManager" routerLink="/planYourTrip/waitingAttractions"
+            routerLinkActive="active">אתרים לאישור</a>
+        <a class="navbar-brand" routerLink="/planYourTrip/allTourGuides" routerLinkActive="active">מדריכי טיול</a>
+        <a class="navbar-brand" *ngIf="nameGuide" routerLink="/planYourTrip/traningRequest" routerLinkActive="active">בקשות
+            להדרכה</a>
+        <a class="navbar-brand" *ngIf="nameGuide" routerLink="/planYourTrip/avtivityDairy" routerLinkActive="active">יומן
+            פעילות</a>
+        <a class="navbar-brand" *ngIf="nameGuide" routerLink="/planYourTrip/editGuide" routerLinkActive="active">ערוך פרופיל
+        </a>
+    </nav>

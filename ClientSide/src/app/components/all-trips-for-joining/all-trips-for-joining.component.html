@@ -1,0 +1,78 @@
+<mat-tab-group>
+    <mat-tab label="כל הטיולים המאורגנים">
+      <h4>טיולים מאורגנים להצטרפות</h4>
+      <h5>הטיולים מאורגנים ומודרכים על ידי צוות מדריכי טיולים מקצועי ומנוסה</h5>
+      <h5 id="changes">יתכנו שינויים בטיולים מאורגנים - השארו מעודכנים במייל ובאתר</h5>
+      <hr>
+      <div id="card" *ngFor="let trip of tripsForJoining">
+  
+        <div id="content" class="inline">
+          <div id="nameAttr">
+  
+            <b *ngFor="let attractionName of attractionsToTrip[trip.id]"> {{attractionName}} |</b>
+          </div>
+          <hr>
+          <div id="guideDetailes">
+            <label *ngIf="guides[trip.id]">בהדרכת:{{guides[trip.id].guideName}} |</label>
+            <label *ngIf="guides[trip.id]">{{guides[trip.id].phoneNumber}}</label>
+            <div id="guideImg">
+              <img *ngIf="guides[trip.id]" [src]="guides[trip.id].profile">
+            </div>
+          </div>
+          <div *ngIf="trip.notes" id="notesDiv">
+            <p id="notes" ngbPopover={{trip.notes}} triggers="mouseenter:mouseleave" popoverTitle={{trip.tripDate|date}}>
+              הערות ועדכונים
+            </p>
+            <mat-icon id="more">arrow_drop_down</mat-icon>
+          </div>
+          <span *ngIf="lastDays(trip)&& !dayOver(trip)">
+            <label class="slideInRight">ימים אחרונים להצטרפות</label><br>
+          </span>
+          <span
+            *ngIf="trip.maxOfTourists-trip.numOfSavedTourists<trip.maxOfTourists/2 && trip.numOfSavedTourists!=trip.maxOfTourists">
+            <label class="flash"> מקומות אחרונים!!!</label><br>
+          </span>
+          <label id="closeSign" *ngIf="trip.maxOfTourists-trip.numOfSavedTourists==0 || dayOver(trip)">ההרשמה לטיול זה
+            נסגרה
+          </label>
+          <label>שעת יציאה :{{trip.leavingTime}}</label><br>
+          <label>נותרו {{trip.maxOfTourists-trip.numOfSavedTourists}} מקומות לטיול זה</label>
+          <label>מספר משתתפים שנרשמו :{{trip.numOfSavedTourists }}</label>
+          <label>מספר מטיילים מקסימלי :{{trip.maxOfTourists}}</label><br>
+          <label *ngIf="trip.price">מחיר ליחיד :{{trip.price}} ש"ח</label>
+          <label *ngIf="!trip.price">הצטרפות חינם</label>
+  
+  
+        </div>
+  
+        <div id="wrapper">
+          <div class="inline" (click)="share(trip)" id="share" title=" שתף עם חבר">
+            <mat-icon>share</mat-icon>
+          </div>
+          <button mat-raised-button (click)="signToTrip(trip.id)">הרשמה</button>
+  
+          <div id="date" class="inline">
+            <h5>{{trip.tripDate|date:'d'}}</h5>
+            <h6>{{trip.tripDate|date:'MMMM'}}</h6>
+          </div>
+        </div>
+        <div id="images">
+          <ngb-carousel interval="3000">
+            <span *ngFor="let attraction of imagesToTrip[trip.id]">
+              <ng-template ngbSlide *ngFor="let img of attraction">
+                <div id="imgDiv" class="picsum-img-wrapper">
+                  <img [src]="img">
+                </div>
+              </ng-template>
+            </span>
+          </ngb-carousel>
+        </div>
+      </div>
+      <app-joining-to-trip [id]=tripId style="display: none"></app-joining-to-trip>
+    </mat-tab>
+  
+    <mat-tab *ngIf="isGuide" label="טיולים מאורגנים שלי">
+      <app-trips-for-guide></app-trips-for-guide>
+    </mat-tab>
+  </mat-tab-group>
+  

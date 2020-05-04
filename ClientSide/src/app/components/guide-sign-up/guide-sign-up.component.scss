@@ -1,0 +1,57 @@
+mat-checkbox {
+  display: inline-block;
+  margin-right: 1.5vw;
+}
+#mat-form-field {
+  //inputs
+  width: 2vw;
+}
+#submit {
+  margin-top: 4vh;
+  margin-left: 11vw;
+}
+form {
+  text-align: right;
+}
+::ng-deep .mat-step-header .mat-step-icon-selected {
+  background-color: #0b4a55;
+}
+img {
+  width: 10vw;
+  height: 19vh;
+  margin-right: 17vw;
+  margin-top: -11vh;
+}
+label {
+  color: #0fb245;
+}
+
+#detailes1 {
+  margin-right: 15vw;
+  margin-left: 11vw;
+}
+#detailes2,
+#detailes1 {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 8vh;
+  p {
+    font-size: 12px;
+    color: red;
+  }
+}
+#step2 {
+  text-align: center;
+  margin-top: 10vh;
+  scroll-margin-right: 5vw;
+}
+#sitePolicy {
+  margin-right: 1vw;
+  display: inline-block;
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+p {
+  display: inline-block;
+}
